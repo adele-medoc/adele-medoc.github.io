@@ -8,91 +8,315 @@
 
 	<body>
 		<!-- on inclut jQuery via CDN -->
-		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="jquery-3.7.1.js"></script>
 
 		<!-- Menu de navigation -->
 		<nav class="menu">
 			<ul>
 			  <li><a href="#" target="_top">Accueil</a></li>
 			  <li><a href="#Apropos">À propos</a></li>
+			  <li><a href="#parcours">Mon parcours</a></li>
+			  <li><a href="#tab">Tableau de compétences</a></li>
 			  <li><a href="#Contact">Contact</a></li>
 			</ul>
 		</nav>
 
 
 		<div id="page">
-		<!--<img src="../images/img1.png" alt="Oupsi je ne trouve pas la photo" />-->
-		<div id="Apropos">
-			<br>
-			<h1> Welcome on my PorteFolio</h1>
+		<!--<img src="images/img4.png" alt="Oupsi je ne trouve pas la photo" />-->
+			<div id="Apropos">
+				<br>
+				<h1> Welcome on my PorteFolio</h1>
 
-			<h2> Présentation </h2>
-				<p></p>
-			<h3> Project professionnel </h3>
-				<p></p>
-		</div>
-
-		<div id="parcours">
-			<h2> Mon Parcours </h2>
-				<p></p>
-			<div id="stage">
-				<h3> Stage pro info </h3>
-				<p></p>
+				<h2> Présentation </h2>
+				<p>Je m’appelle Adèle, j’ai 26 ans et je suis actuellement en BTS SIO option SLAM, en formation continue sur un an, au GRETA de Quimper.
+					J’ai commencé cette formation dans le cadre d’une reconversion professionnelle, après avoir exercé le métier d’infirmière, qui ne correspondait plus à mes valeurs.
+					Mon attrait pour la programmation a commencé lorsque j'ai découvert le langage Python. J'ai réalisé quelques projets, comme une calculatrice et des petits programmes permettant, par exemple, de vérifier si un nombre est premier ou d’afficher des motifs à l’aide de boucles.
+					Ces expériences m'ont permis de comprendre l'importance de la logique dans le développement informatique. La résolution de problèmes et la structuration de la pensée pour trouver des solutions efficaces sont des aspects qui me plaisent particulièrement. En outre, j'apprécie le fait que le développement informatique ne soit pas seulement technique, mais aussi créatif. Chaque projet, même simple, est une occasion d'exprimer ma créativité et d'apprendre de nouvelles choses.
+					</p>
+				<h3> Projet professionnel </h3>
+				<p>
+					Dans le cadre de mon parcours, j'ai choisi de m'orienter vers une alternance pour obtenir un titre professionnel niveau licence en tant que Concepteur Développeur d'Application. Cette démarche vise à approfondir mes connaissances techniques et à gagner en autonomie dans le domaine du développement applicatif. L'alternance me permettra également de renforcer ma confiance en moi en me confrontant à des situations réelles et en collaborant avec des professionnels expérimentés. Je suis davantage attiré par le développement logiciel que par le développement web, et je souhaite construire ma carrière dans ce domaine.
+				</p>
 			</div>
-		</div>
 
-		<div id="projets">
+			<div id="parcours">
+				<h2> Mon Parcours </h2>
+				<p></p>
+				<div id="stage">
+					<h3> Parcours en entreprise </h3>
+					<p> Lors de mon stage chez Tempora, j’ai eu l’opportunité de travailler sur plusieurs projets concrets mêlant conception et développement.
+					Pour le premier projet, j’avais pour mission la refonte de l’interface homme-machine (IHM) pour moderniser le formulaire d’envoi de messages généraux à un ensemble d’organisation et en y intégrant de nouvelles fonctionnalités. J’ai également modifié le backend, ainsi que des requêtes SQL pour intégrer les améliorations.
+					Lors d’une seconde période, j’ai créé l’historique de l’application pour des centres d’appels, avec des options d’affichage dynamiques. Ce projet a été réalisé avec le framework Angular, en utilisant la bibliothèque Clarity Design pour l’interface. Côté backend, j’ai développé les routes, les DAO et les contrôleurs en Scala.
+					Ces expériences m’ont permis de renforcer mes compétences en développement, notamment avec JavaScript (jQuery, TypeScript), HTML, CSS (LESS, SCSS), SQL, Angular et Scala.
+					</p>
+				</div>
+			</div>
 
-			<div>
-				<h2> Technologies </h2>
+			<div id="technologies">
+
+					<h2> Technologies </h2>
+
 					<h4> langages </h4>
-					<h4> logiciels utilisés </h4>
+					<div id="langage">
+						<button id="b1"><span>←</span></button>
+						<div id="lang1"></div>
+						<div id="lang2"></div>
+						<div id="lang3"></div>
+						<button id="b2"><span>→</span></button>
 
+					</div>
+					<script>
+						$("langage").ready(function() {
+							let cpt=0
+
+							function updateImages() {
+
+								nb = cpt % 8;
+								nb2 = (cpt+1)% 8;
+								nb3 = (cpt+2)% 8;
+
+								$("#lang1").html("<img src='images/lang"+ nb +".png' alt='photo"+ nb +"'>");
+								$("#lang2").html("<img src='images/lang"+ nb2 +".png' alt='photo"+ nb2 +"''>");
+								$("#lang3").html("<img src='images/lang"+ nb3 +".png' alt='photo"+ nb3 +"''>");
+
+							}
+							updateImages();
+
+
+							$("#b1").on("click", function() {
+							cpt = (cpt - 1 + 8) % 8;
+            				updateImages();
+        					});
+
+							$("#b2").on("click", function() {
+            				cpt = (cpt + 1) % 8; // pour éviter les négatifs
+            				updateImages();
+        					});
+
+						});
+					</script>
+
+					<h4> logiciels utilisés </h4>
+					<div id="logiciel">
+						<button id="b3"><span>←</span></button>
+						<div id="logi1"></div>
+						<div id="logi2"></div>
+						<div id="logi3"></div>
+						<button id="b4"><span>→</span></button>
+					</div>
+					<script>
+						$("logiciel").ready(function() {
+							let cpt=0
+
+							function updateImageslang() {
+
+								nb = cpt % 10;
+								nb2 = (cpt+1)% 10;
+								nb3 = (cpt+2)% 10;
+
+								$("#logi1").html("<img src='images/logi"+ nb +".png' alt='photo"+ nb +"'>");
+								$("#logi2").html("<img src='images/logi"+ nb2 +".png' alt='photo"+ nb2 +"''>");
+								$("#logi3").html("<img src='images/logi"+ nb3 +".png' alt='photo"+ nb3 +"''>");
+
+							}
+							updateImageslang();
+
+
+							$("#b3").on("click", function() {
+							cpt = (cpt - 1 + 10) % 10;
+            				updateImageslang();
+        					});
+
+							$("#b4").on("click", function() {
+            				cpt = (cpt + 1) % 10; // pour éviter les négatifs
+            				updateImageslang();
+        					});
+
+						});
+					</script>
 			</div>
 
 			<div id="competenceE5">
-				<h2> Compétence E5 </h2>
+				<h2> Tableau de compétence </h2>
+				<br>
 				<table border="1">
 					<tr>
-						<td></td>
-						<td>Compétences mise en oeuvre</td>
-						<td>Période</td>
-						<td>Gérer le patrimoine informatique</td>
-						<td>Répondre aux incidents et aux demandes d'assistance et d'évolution</td>
-						<td>Développer la présence en ligne de l'organisation</td>
-						<td>Travailler en mode projet</td>
-						<td>Mettre à disposition des utilisateurs un service informatique</td>
-						<td>Organiser son développement professionnel</td>
+						<th scope="col">Réalisation professionnelles</th>
+						<th  scope="col">Compétences mise en oeuvre</th>
+						<th  scope="col">Période</th>
+						<th  scope="col">Gérer le patrimoine informatique</th>
+						<th scope="col">Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
+						<th scope="col">Développer la présence en ligne de l'organisation</th>
+						<th  scope="col">Travailler en mode projet</th>
+						<th  scope="col">Mettre à disposition des utilisateurs un service informatique</th>
+						<th scope="col">Organiser son développement professionnel</th>
 					</tr>
+
 					<tr>
 						<td colspan="9">Exemple de réalisation au cours de mon BTS en formation </td>
 					</tr>
 
 					<tr>
-						<td>Réalisation professionnelles</td>
+						<td colspan="2">Installation et configuration de GLPI</td>
+						<td>18/11/24</td>
+						<td></td>
+						<td><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/blob/main/reseau/TP_GLPI.pdf"><img src="images/git2.png" width="50" height="50"/></a></td>
 						<td></td>
 						<td></td>
 						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">Installation et configuration d'un server Windows</td>
+						<td>27/01/25</td>
+						<td><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/blob/main/reseau/TP_Windows_server.pdf"><img src="images/git2.png" width="50" height="50"/></a></td>
 						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>
 					</tr>
+
+					<tr>
+						<td colspan="2"> AllergoMenu </td>
+						<td>janvier-février</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="https://github.com/projetBTSSIO/AllergoMenu"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">AllergoMenuWeb</td>
+						<td>avril-mai</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="https://github.com/projetBTSSIO/AllergoMenuWeb"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">Veille technologique</td>
+						<td>sep-juin</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><img src="images/etoile(1).png" width="50" height="50"/></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">Linkedin</td>
+						<td>depuis Septembre</td>
+						<td><a href="www.linkedin.com/in/adèle-médoc-0158ba32b"><img src="images/logo-linkedin.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="www.linkedin.com/in/adèle-médoc-0158ba32b"><img src="images/logo-linkedin.png" width="50" height="50"/></a></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">La fleur</td>
+						<td>septembre</td>
+						<td><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/tree/main/HTML-PHP-CSS/Lafleur"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2"> Mooc de ANSSI SecNum</td>
+						<td>février</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="images/secnum.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+					</tr>
+
 					<tr>
 						<td colspan="9">Exemple de réalisation au cours de mon BTS en stage </td>
 					</tr>
+
 					<tr>
-						<td colspan="9">Exemple de réalisation au cours de mon BTS en auto-didact </td>
+						<td colspan="2">Tempora - refonte de formulaire d'envoi de messages généraux</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+						<td></td>
 					</tr>
+
+					<tr>
+						<td colspan="2">Tempora - création d'une page pour l'historique des opérations</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="9">Exemple de réalisation au cours de mon BTS en autodidacte </td>
+					</tr>
+
+					<tr>
+						<td colspan="2">mini-calculatrice python</td>
+						<td>septembre</td>
+						<td><a href="https://github.com/adele-medoc/mini_calculatrice"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2">site github page pour le portefolio</td>
+						<td>27/01/25</td>
+						<td><img src="images/etoile(1).png" width="50" height="50"/></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><img src="images/etoile(1).png" width="50" height="50"/></td>
+						<td><img src="images/etoile(1).png" width="50" height="50"/></td>
+					</tr>
+
 				</table>
 			</div>
 
-		</div>
+			<div id="veille">
+				<h2> Veille Technologique </h2>
+				<br>
+				<h4>Qu'est-ce que la veille technologique ?</h4>
+				<p>La veille technologique est un processus de surveillance active des innovations, des évolutions techniques
+				et des tendances dans un domaine donné, afin d’anticiper les changements et d’adapter les stratégies d'une
+				entreprise ou d'un professionnel. Elle permet de rester compétitif en identifiant les opportunités et les menaces
+				liées aux nouvelles technologies.
+				</p>
+				<br>
+				<h4>Objets connectés : entre innovation technologique et menaces pour la vie privée</h4>
+				<p> L’Internet des Objets (IoT) connaît depuis plusieurs années une croissance fulgurante, bouleversant notre quotidien aussi bien dans la sphère personnelle que professionnelle. Des montres connectées aux assistants vocaux, en passant par les dispositifs médicaux ou les systèmes domotiques, les objets connectés s’imposent comme des outils incontournables d’une société toujours plus numérique.
+				Cependant, cette révolution technologique soulève de nombreuses interrogations, notamment en matière de sécurité et de protection des données personnelles. La multiplication des objets connectés accroît en effet la surface d’attaque potentielle pour les cybercriminels, mettant en danger la confidentialité des utilisateurs et l’intégrité des systèmes.
+				Dans ce contexte, il devient essentiel de comprendre les enjeux liés à la sécurisation de l’IoT, les vulnérabilités les plus courantes, et les solutions envisagées pour garantir un développement harmonieux et sécurisé de ces technologies.
+				</p>
 
-		<div id="veille">
-			<h2> Veille Technologique </h2>
+			</div>
 		</div>
-	</div>
 	</body>
 </html>

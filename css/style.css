@@ -3,28 +3,30 @@ body{
     background-color: #EFC7B3;
     padding: 0px;
     margin: 0px;
-    display: flex;
+    display: grid;
     height: 100%;
+
 }
 
 img {
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
   }
 
 nav { background-color: #D44E22;
 
     margin: 0px;
     padding: 0px;
-    height: 400vh;
-    width: 25vw;
+    height: 100vh;
+    width: 10vw;
+    position: fixed;
 }
 
 
 ul {list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 10vw;}
+    }
 
 
 
@@ -35,7 +37,8 @@ li a {color:#A3003C;
     text-decoration: none;
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+    text-align: center;}
 
 li a:hover {color:#FFFFFF;
     font-weight: bolder;
@@ -44,7 +47,7 @@ li a:hover {color:#FFFFFF;
 
 
 #page{
-    padding-left: 8px;
+    padding-left: 170px;
     flex-grow: 1;
 }
 
@@ -57,3 +60,55 @@ h5{color:#c9cba3}
 div {color : #E68491;
     color: #D44E22;
     }
+
+table{border-collapse: collapse;}
+/***********************************Caroussel********************************************/
+button {
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    transition: all 1.5s ease;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+  }
+
+  button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 20px;
+    background: #ffffff10;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease-in-out;
+    transition-property: color, backdrop-filter;
+    height: 100%;
+    width: 100%;
+  }
+
+  button:hover span {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+  }
+#logiciel {
+    display: flex;
+    flex-direction:row;
+    max-width: 300px;
+}
+
+
+#langage {
+    display: flex;
+  flex-wrap: wrap;        /* pour aller à la ligne si ça dépasse */
+  flex-direction:row;
+
+
+}
+
+#langage img, #logiciel img{
+    max-width: 200px;
+}
