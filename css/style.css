@@ -1,20 +1,53 @@
+/***********************************page globale********************************************/
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #EFC7B3;
+    background-color: #f7d5b9;
     padding: 0px;
     margin: 0px;
     display: grid;
     height: 100%;
-
 }
+#top{
+    background-image: url("../images/img4.png");
+    margin-left: -13px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    flex-direction:column;
+    text-shadow: 5px 3px 8px rgba(0,0,0,0.6);
+    margin-bottom: 100px;
+}
+#page{
+    padding-left: 170px;
+    flex-grow: 1;
+    display:grid;
+}
+
+h1{color: white;}
+h2{
+    color: #11736C;
+    font-size: 32px;
+    margin: 0px 0px 0px 60px;
+    padding: 25px 0 0 0;
+}
+
+h3{color:#C52A1B;
+    margin-left: 95px;
+    font-size: 28px;}
+h4{color:#198F83;
+    margin-left: 110px;
+    font-size: 26px;}
+h5{color: #E94F1A;}
+
 
 img {
     height: auto;
-    max-width: 100%;
-  }
-
-nav { background-color: #D44E22;
-
+    max-width: 512;
+}
+/*********************************** barre navigation ********************************************/
+nav { background-color: #21AB99;
     margin: 0px;
     padding: 0px;
     height: 100vh;
@@ -22,51 +55,211 @@ nav { background-color: #D44E22;
     position: fixed;
 }
 
+#bande1{
+    background-color: #EC861C;
+    margin-left: 144px;
+    padding: 0px;
+    height: 100vh;
+    width: 7px;
+    position: fixed;}
+#bande2{
+    background-color: #C52A1B;
+    margin-left: 150px;
+    padding: 0px;
+    height: 100vh;
+    width: 7px;
+    position: fixed;}
 
 ul {list-style-type: none;
     margin: 0;
     padding: 0;
-    }
+}
 
-
-
-li a {color:#A3003C;
-    ;
+li a {color:#0C6662;
     display: block;
     font-weight: bold;
     text-decoration: none;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    text-align: center;}
+    text-align: center;
+}
 
 li a:hover {color:#FFFFFF;
     font-weight: bolder;
-    background-color: #A3003C;
-    margin: 0px;}
-
-
-#page{
-    padding-left: 170px;
-    flex-grow: 1;
+    background-color: #0C6662;
+    margin: 0px;
 }
 
-h1{color: #A3003C;}
-h2{color: #C6114F;}
-h3{color:#D4215B;}
-h4{color:#DD416F}
-h5{color:#c9cba3}
+/*********************************** À propos de moi ********************************************/
+#Apropos{display: flex;
+    flex-direction: row;
+    background-image: linear-gradient(#EC861C,#C52A1B);
+    margin-right: 100px;
+    margin-left: 120px;
+    padding-right: 44px;
+    padding-top: 20px;
+    padding-block-end: 20px;
+    border-radius: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 20px;
+}
+#Apropos p {
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    margin-bottom: 18px;
+    margin-left: 52px;
+    padding-right: 50px;
+    font-size: 17px;
+    padding-bottom: 70px;
+}
+#Apropos img {
+    border-radius: 51%;
+  }
 
-div {color : #E68491;
-    color: #D44E22;
-    }
+#contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 255px 10px 72px;
+}
+.buttonContact{
+    width: 130px;
+  height: 45px;
+  margin-left: 171px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
 
-table{border-collapse: collapse;}
+/*********************************** Parcours ********************************************/
+#parcours{display: grid;
+    grid-template-columns: 40% 20% 40%;
+    grid-template-rows: 20% 20% 20%;
+    height: 700px;}
+#parcours img{
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#divParcours1{justify-self: end;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-right: -15px;
+    margin-top: 79px;
+}
+#divParcours1 h5{color: #006A89;}
+#divParcours2 h5{color: #E20713;}
+#divParcours3 h5{color: #53AF33;}
+
+#divParcours2{justify-self: end;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    margin-right: -15px;
+    margin-top: 109px;
+}
+#divParcours3{grid-column-start: 3;
+    grid-row-start: 2;
+    justify-self: first baseline;
+    margin-top: 94px;
+    margin-left: -21px;
+}
+
+.card{
+    background: #ffffff;
+    width: 130px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 38px;
+    padding-top: 13px;
+    transition: all 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+.card:hover {
+    width: 500px;
+    height: 280px;
+}
+
+.card:hover img {
+    width : 80px;
+    height : 50px;
+    padding: 0px 0px 0px 400px;
+    margin: 0px;
+    align-items: self-end;
+    justify-content: end;
+    border-radius: 0px;
+
+}
+
+.card:hover p {
+    width : 450px;
+    height : 200px;
+    padding: 0px 0px 15px 25px;
+    margin: 0px;
+    align-items: end;
+    justify-content: center;
+    text-align: justify;
+
+}
+
+.card:hover h5 {
+    width : 250px;
+    height : 20px;
+    padding: 0px 0px 5px 120px;
+    margin: 0px;
+    justify-self: center;
+}
+
+/***********************************projet pro********************************************/
+.projetPro{
+    margin: 0px 144px 60px 134px;
+
+  box-shadow: 4px 7px 16px 2px black;
+
+  text-align: justify;
+  font-size: larger;
+  background-color: rgba(33, 171, 153, 0.44);
+  border: 2px solid #198f83;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  line-height: 1.4;
+}
+.projetPro:hover{
+    transform: scale(1.03);
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+  background-color: rgba(33, 171, 153, 0.7);
+  font-size: 20px;
+}
+
+.projetPro ul{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 252px;
+  gap: 10px;
+}
+.projetPro li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 /***********************************Caroussel********************************************/
 button {
     border: none;
     border-radius: 20px;
-    background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background: linear-gradient(32deg,#0C6662,#1D9787,#C52A1B,#EC861C);
     transition: all 1.5s ease;
     font-family: 'Ropa Sans', sans-serif;
     font-weight: bold;
@@ -74,9 +267,9 @@ button {
     padding: 0px;
     width: 30px;
     height: 30px;
-  }
+}
 
-  button span {
+button span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,27 +281,216 @@ button {
     transition-property: color, backdrop-filter;
     height: 100%;
     width: 100%;
-  }
+}
 
-  button:hover span {
+button:hover span {
     backdrop-filter: blur(0px);
     color: #ffffff;
+}
+
+#langage,#logiciel  {
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  max-width: 800px;
+  margin: 40px auto 50px auto;
+  max-height: 200px;
+}
+
+#lang1, #lang2, #lang3,
+#logi1, #logi2, #logi3 {
+  flex: 1;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
+#lang1:hover .overlay , #lang2:hover .overlay , #lang3:hover .overlay ,
+#logi1:hover .overlay , #logi2:hover .overlay , #logi3:hover .overlay  {
+    opacity: 1;
+    border-radius: 20px;
+}
+.cardTechno .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    font-size: 15px;
+    text-align: end;
+    padding: 0px;
+    text-align: center;
+    justify-content: end;
+    height: 50%;
   }
-#logiciel {
-    display: flex;
-    flex-direction:row;
-    max-width: 300px;
-}
-
-
-#langage {
-    display: flex;
-  flex-wrap: wrap;        /* pour aller à la ligne si ça dépasse */
-  flex-direction:row;
-
-
-}
+  .cardTechno{
+    padding: 0px;
+  position: relative;
+  border: none;
+  margin: 0px;
+  width: 200px;
+  height: 200px;
+  }
 
 #langage img, #logiciel img{
     max-width: 200px;
+    height: auto;
+  margin: 0 auto;
+}
+
+#technologies{margin: 35px 0 45px 0;}
+
+/***********************************tableau competence********************************************/
+
+#competenceE5{margin: 0 10px 60px 0px;}
+
+table{border-collapse: collapse;
+    text-decoration: solid;
+    border: none;
+    margin-left: 1px;
+    margin-right: 5px;
+}
+
+td{ text-align: center;
+    border-color: black;
+}
+
+th{background-color: #C52A1B;
+   color: #FFFFFF;
+   border: none;
+   width: 12%;
+}
+
+td img{display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exemple{background-color: #E94F1A;
+        border: none;
+        color: #ffffff;
+        text-decoration: solid;
+}
+.colortab1 {background-color: #EB6B1B;
+        border: none;}
+.colortab2{background-color: #EC861C;
+    border: none;
+}
+.casePleine:hover {background-color:#E94F1A;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+/***********************************Veille techno********************************************/
+
+#sujetVeille{
+    background-color: #21AB99;
+  margin: 0px 45px 0px 32px;
+  padding: 1px 18px 1px 20px;
+}
+#defVeille{
+    margin: 0 194px 0 146px;
+    padding: 0px;
+    text-align: justify;
+    font-size: large;
+    line-height: 1.4;
+}
+#defVeille h4{margin: 0 0 0 -36px;}
+
+#outilsVeille{
+    margin: 12px 144px 60px 134px;
+    box-shadow: 4px 7px 16px 2px black;
+    text-align: justify;
+    font-size: larger;
+    background-color:#E94F1A57;
+    border: 2px solid #C52A1B;
+    padding: 1px 25px 1px 25px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: row;
+}
+#outilsVeille:hover{
+    transform: scale(1.03);
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+  background-color: #E94F1AB5;
+  font-size: 20px;
+}
+
+#outilsVeille img{
+    height: 200px;
+  width: 200px;
+  margin: 0 25px 0px 0px;
+}
+
+#outilsVeille p{
+    align-self: center;
+}
+
+#article{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 25% 25% 25% 25%;
+}
+.cardVeille{
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e2ddef;
+    width: 200px;
+    height: 315px;
+    margin: 0px 0px 20px 5px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    text-align: justify;
+    padding: 0px 8px 8px 8px;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+.cardVeille[name="hidden"] {
+    display:none;
+}
+
+.cardVeille p {
+    font-size: initial;
+    margin: 0;
+    flex-grow: 1;
+}
+.cardVeille h5{
+    font-size: 17px;
+    padding: 0;
+    margin:  10px 10px 6px 0px;
+    color: #0C6662;
+}
+.cardVeille a,#divParcours1 a,
+#divParcours2 a,#divParcours3 a {
+    outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+  margin: 0 10px 9px 0;
+  align-self: flex-end;
+  font-size: 12px;
+}
+
+.cardVeille:hover{
+    transform: scale(1.03);
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+#buttonArticle{
+    width: 130px;
+  height: 45px;
+  margin: 20px 0 50px 0;
+  justify-self: center;
+  grid-column-start: 5;
 }

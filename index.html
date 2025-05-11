@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<link href="css/style.css" rel="stylesheet">
-		<title> Bienvenue ! </title>
+		<title> Portfolio - Adèle Médoc </title>
 	</head>
 
 	<body>
@@ -14,50 +14,117 @@
 		<nav class="menu">
 			<ul>
 			  <li><a href="#" target="_top">Accueil</a></li>
-			  <li><a href="#Apropos">À propos</a></li>
-			  <li><a href="#parcours">Mon parcours</a></li>
-			  <li><a href="#tab">Tableau de compétences</a></li>
-			  <li><a href="#Contact">Contact</a></li>
+			  <li><a href="#titreApropos">À propos</a></li>
+			  <li><a href="#titreParcours">Mon parcours</a></li>
+			  <li><a href="#technologies">Technologies</a></li>
+			  <li><a href="#competenceE5">Tableau de compétences</a></li>
+			  <li><a href="#veille">Veille Technologique</a></li>
 			</ul>
 		</nav>
+		<div id="bande1" class="menu"></div>
+		<div id="bande2" class="menu"></div>
 
 
 		<div id="page">
-		<!--<img src="images/img4.png" alt="Oupsi je ne trouve pas la photo" />-->
-			<div id="Apropos">
-				<br>
-				<h1> Welcome on my PorteFolio</h1>
+			<div id="top">
 
-				<h2> Présentation </h2>
+					<h1>Adèle Médoc</h1>
+				<h1> Bienvenue sur mon portfolio</h1>
+
+			</div>
+<!-- À propos de moi - présentation -->
+			<h2 id="titreApropos">À propos de moi</h2>
+			<div id="Apropos">
 				<p>Je m’appelle Adèle, j’ai 26 ans et je suis actuellement en BTS SIO option SLAM, en formation continue sur un an, au GRETA de Quimper.
-					J’ai commencé cette formation dans le cadre d’une reconversion professionnelle, après avoir exercé le métier d’infirmière, qui ne correspondait plus à mes valeurs.
-					Mon attrait pour la programmation a commencé lorsque j'ai découvert le langage Python. J'ai réalisé quelques projets, comme une calculatrice et des petits programmes permettant, par exemple, de vérifier si un nombre est premier ou d’afficher des motifs à l’aide de boucles.
-					Ces expériences m'ont permis de comprendre l'importance de la logique dans le développement informatique. La résolution de problèmes et la structuration de la pensée pour trouver des solutions efficaces sont des aspects qui me plaisent particulièrement. En outre, j'apprécie le fait que le développement informatique ne soit pas seulement technique, mais aussi créatif. Chaque projet, même simple, est une occasion d'exprimer ma créativité et d'apprendre de nouvelles choses.
-					</p>
+					J’ai commencé cette formation dans le cadre d’une reconversion professionnelle, après avoir exercé le métier d’infirmière.
+					<br>
+					<br>
+					Mon attrait pour la programmation a commencé lorsque j'ai découvert le langage Python.
+					J'ai réalisé quelques projets, comme une calculatrice et des petits programmes permettant, par exemple, de vérifier si un nombre est premier ou d’afficher des motifs à l’aide de boucles.
+					<br>
+					<br>
+					Ces expériences m'ont permis de comprendre l'importance de la logique dans le développement informatique. La résolution de problèmes et la structuration de la pensée pour trouver des solutions efficaces sont des aspects qui me plaisent particulièrement.
+					En outre, j'apprécie le fait que le développement informatique ne soit pas seulement technique, mais aussi créatif. Chaque projet, même simple, est une occasion d'exprimer ma créativité et d'apprendre de nouvelles choses.
+				</p>
+				<img src="images/hw.png" alt="image de présentation"/>
+			</div>
+			<div id="contact">
+				<button class="buttonContact" onclick="window.open('images/cv.pdf', '_blank')"><span> Voir mon CV</span> </button>
+				<button class="buttonContact" onclick="location.href='https://www.linkedin.com/in/ad%C3%A8le-m%C3%A9doc-0158ba32b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app';"><span> Voir mon Linkedin</span> </button>
+				<button class="buttonContact" onclick="location.href='https://github.com/adele-medoc';"><span> Voir mon GitHub</span> </button>
+			</div>
+
+
+<!-- Mon parcours en informatique + projet pro -->
+			<h2 id="titreParcours"> Mon parcours en informatique </h2>
+			<div id="parcours">
+				<div id="divParcours1" class="card" > Tempora SAS </div>
+				<div id="divParcours2" class="card"> RBI Informatique</div>
+				<img src="images/barre.png"/>
+				<div id="divParcours3" class="card"> BTS SIO SLAM </div>
+
+			</div>
+			<div class="projetPro">
 				<h3> Projet professionnel </h3>
 				<p>
-					Dans le cadre de mon parcours, j'ai choisi de m'orienter vers une alternance pour obtenir un titre professionnel niveau licence en tant que Concepteur Développeur d'Application. Cette démarche vise à approfondir mes connaissances techniques et à gagner en autonomie dans le domaine du développement applicatif. L'alternance me permettra également de renforcer ma confiance en moi en me confrontant à des situations réelles et en collaborant avec des professionnels expérimentés. Je suis davantage attiré par le développement logiciel que par le développement web, et je souhaite construire ma carrière dans ce domaine.
+					Dans le cadre de mon parcours, j'ai choisi de m'orienter vers une <strong>alternance</strong> pour obtenir un
+					<strong>titre professionnel de niveau licence</strong> en tant que <strong>Concepteur Développeur d'Application</strong>.
 				</p>
+				<ul>
+					<li> <img src="images/arc.png" width="40" height="40"/>Approfondir mes compétences techniques</li>
+					<li><img src="images/arc.png" width="40" height="40"/>Gagner en autonomie grâce à des missions réelles</li>
+					<li><img src="images/arc.png" width="40" height="40"/>M’immerger dans une équipe professionnelle</li>
+					<li><img src="images/arc.png" width="40" height="40"/>Préférence pour le développement logiciel</li>
+				</ul>
 			</div>
+			<script>
+				function afficherParcours(){
+					$( "#divParcours1" ).hover(
+  						function() {
+							$( this ).append( $( "<img class='card' src='images/tempora.png' alt='logo'/>" ) );
+    						$( this ).append( $( " <h5 class='card'>Brest | décembre 2024 - juin 2025</h5> <p class='card'> Lors de mon stage chez Tempora, j’ai participé à deux projets : <br> – Refonte d’une IHM pour l’envoi de messages avec ajout de fonctionnalités (frontend + backend).<br> – Création de l'historique des opérations de l'application pour la nouvelle version de tempora avec Angular et Clarity, backend en Scala.<br> Compétences développées : JavaScript, TypeScript, Angular, Scala, SQL, HTML/CSS. <br> </p><a href='https://tempora.fr/solution-logiciel-de-secretariat'>tempora.fr </a>") );
 
-			<div id="parcours">
-				<h2> Mon Parcours </h2>
-				<p></p>
-				<div id="stage">
-					<h3> Parcours en entreprise </h3>
-					<p> Lors de mon stage chez Tempora, j’ai eu l’opportunité de travailler sur plusieurs projets concrets mêlant conception et développement.
-					Pour le premier projet, j’avais pour mission la refonte de l’interface homme-machine (IHM) pour moderniser le formulaire d’envoi de messages généraux à un ensemble d’organisation et en y intégrant de nouvelles fonctionnalités. J’ai également modifié le backend, ainsi que des requêtes SQL pour intégrer les améliorations.
-					Lors d’une seconde période, j’ai créé l’historique de l’application pour des centres d’appels, avec des options d’affichage dynamiques. Ce projet a été réalisé avec le framework Angular, en utilisant la bibliothèque Clarity Design pour l’interface. Côté backend, j’ai développé les routes, les DAO et les contrôleurs en Scala.
-					Ces expériences m’ont permis de renforcer mes compétences en développement, notamment avec JavaScript (jQuery, TypeScript), HTML, CSS (LESS, SCSS), SQL, Angular et Scala.
-					</p>
-				</div>
-			</div>
-
+						},
+  						function () {
+    						$(this).find("p").remove();
+							$(this).find("h5").remove();
+							$(this).find("img").remove();
+							$(this).find("a").remove();
+  						}
+					);
+					$( "#divParcours2" ).hover(
+  						function() {
+							$( this ).append( $( "<img class='card' src='images/rbi.jpg' alt='logo'/>" ) );
+    						$( this ).append( $( "<h5 class='card'> Rennes | Mars 2024 </h5> <p class='card'> Lors de mon stage de reconversion chez RBI Informatique, j’ai observé et collaboré avec les équipes de support technique et de développement. <br> J’ai pu découvrir les outils et méthodes utilisés dans un environnement professionnel autour de la gestion de solutions ERP (PGI) et de logiciels sur mesure. <br>Compétences développées : compréhension des environnements ERP, gestion du support client, découverte du cycle de vie d’un projet applicatif.</p><a href=''>rbi-informatique.fr </a>" ) );
+  						},
+  						function () {
+    						$(this).find("p").remove();
+							$(this).find("h5").remove();
+							$(this).find("img").remove();
+							$(this).find("a").remove();
+  						}
+					);
+					$( "#divParcours3" ).hover(
+  						function() {
+    						$( this ).append( $( "<img class='card' src='images/greta.png' alt='logo'/>" ) );
+							$( this ).append( $( "<h5 class='card'>Quimper | septempre 2024 - juin 2025 </h5> <p class='card'>J’ai suivi un BTS SIO option SLAM au GRETA de Quimper, où j’ai acquis des compétences solides en développement web et applicatif, bases de données et programmation orientée objet.<br> Compétences développées : développement frontend et backend, modélisation UML, conception et manipulation de bases de données, algorithmique, HTML/CSS, JavaScript, PHP, Java, SQL.</p><a href='https://greta-bretagne.ac-rennes.fr/portail/web/notre-reseau/greta-cfa-de-bretagne-occidentale/agence-de-quimper'>Greta Quimper</a>" ) );
+  						},
+  						function () {
+    						$(this).find("p").remove();
+							$(this).find("h5").remove();
+							$(this).find("img").remove();
+							$(this).find("a").remove();
+						}
+					);
+				}
+				afficherParcours();
+			</script>
+<!-- logiciel et langages -->
 			<div id="technologies">
 
 					<h2> Technologies </h2>
 
-					<h4> langages </h4>
+					<h3> langages </h3>
 					<div id="langage">
 						<button id="b1"><span>←</span></button>
 						<div id="lang1"></div>
@@ -69,35 +136,103 @@
 					<script>
 						$("langage").ready(function() {
 							let cpt=0
+							//fonction pour changer les images dans le caroussel langage
+							function updateImageslang() {
 
-							function updateImages() {
+								nb = cpt % 9;
+								nb2 = (cpt+1)% 9;
+								nb3 = (cpt+2)% 9;
 
-								nb = cpt % 8;
-								nb2 = (cpt+1)% 8;
-								nb3 = (cpt+2)% 8;
+								let str="";
+								let str1="";
+								let str2="";
+								let tab = [nb,nb2,nb3];
 
-								$("#lang1").html("<img src='images/lang"+ nb +".png' alt='photo"+ nb +"'>");
-								$("#lang2").html("<img src='images/lang"+ nb2 +".png' alt='photo"+ nb2 +"''>");
-								$("#lang3").html("<img src='images/lang"+ nb3 +".png' alt='photo"+ nb3 +"''>");
+								for (i=0;i<3;i++){
+									key = tab[i];
+									console.log("i="+i+"key="+key)
+									switch (key) {
+									case 0:
+										reponse = "<b> Java </b> <br> JavaFX,JDBC"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 1:
+										reponse= "<b> C++ </b> <br>"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 2:
+										reponse="<b> CSS </b> <br> LESS,SCSS"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 3:
+										reponse = "<b> HTML </b> <br>"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 4:
+										reponse = "<b> JavaScript </b> <br> Jquery,TypeScript"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 5:
+										reponse="<b> PL/SQL </b> <br>Procedural Language / Structured Query Language "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 6:
+										reponse = "<b> Python </b> "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 7:
+										reponse = "<b> Scala </b><br> "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 8:
+										reponse= "<b> Angular </b> <br> ClarityDesign"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									default:
+										break;
+								}
+								}
+
+								$("#lang1").html("<figure class='cardTechno'><img src='images/lang"+ nb +".png' alt='photo"+ nb +"'/> <figcaption class='overlay'> <p> "+ str +"</p> </figcaption> </figure>");
+								$("#lang2").html("<figure class='cardTechno'><img src='images/lang"+ nb2 +".png' alt='photo"+ nb2 +"'/> <figcaption class='overlay'> <p> "+ str1 +"</p> </figcaption> </figure>");
+								$("#lang3").html("<figure class='cardTechno'><img src='images/lang"+ nb3 +".png' alt='photo"+ nb3 +"'/> <figcaption class='overlay'> <p> "+ str2 +"</p> </figcaption> </figure>");
 
 							}
-							updateImages();
+							updateImageslang();
 
 
 							$("#b1").on("click", function() {
-							cpt = (cpt - 1 + 8) % 8;
-            				updateImages();
+							cpt = (cpt - 1 + 9) % 9;
+            				updateImageslang();
         					});
 
 							$("#b2").on("click", function() {
-            				cpt = (cpt + 1) % 8; // pour éviter les négatifs
-            				updateImages();
+            				cpt = (cpt + 1) % 9; // pour éviter les négatifs
+            				updateImageslang();
         					});
 
 						});
 					</script>
 
-					<h4> logiciels utilisés </h4>
+					<h3> logiciels utilisés </h3>
 					<div id="logiciel">
 						<button id="b3"><span>←</span></button>
 						<div id="logi1"></div>
@@ -108,42 +243,116 @@
 					<script>
 						$("logiciel").ready(function() {
 							let cpt=0
-
-							function updateImageslang() {
+							//fonction pour changer les images dans le caroussel logiciel
+							function updateImageslogi() {
 
 								nb = cpt % 10;
 								nb2 = (cpt+1)% 10;
 								nb3 = (cpt+2)% 10;
 
-								$("#logi1").html("<img src='images/logi"+ nb +".png' alt='photo"+ nb +"'>");
-								$("#logi2").html("<img src='images/logi"+ nb2 +".png' alt='photo"+ nb2 +"''>");
-								$("#logi3").html("<img src='images/logi"+ nb3 +".png' alt='photo"+ nb3 +"''>");
+								let str="";
+								let str1="";
+								let str2="";
+								let tab = [nb,nb2,nb3];
+
+								for (i=0;i<3;i++){
+									key = tab[i];
+									console.log("i="+i+"key="+key)
+									switch (key) {
+									case 0:
+										reponse = "<b> Eclipse </b> <br> IDE Java"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 1:
+										reponse= "<b> Git </b><br> logiciel de gestion de versions "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 2:
+										reponse="<b> Laragon </b> <br> environnement de développement web "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 3:
+										reponse = "<b> github </b><br>plateforme open source de gestion de versions et de collaboration "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 4:
+										reponse = "<b> PHP My Admin </b> <br> application Web de gestion pour les systèmes de gestion de base de données MySQL "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 5:
+										reponse="<b> RAD Studio </b><br> IDE "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 6:
+										reponse = "<b> Thonny </b><br> IDE Python "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 7:
+										reponse = "<b> Visual Studio </b><br> éditeur de code "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 8:
+										reponse= "<b> Visual Studio Code </b><br> IDE "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 9:
+										reponse= "<b> Wamp </b> <br> environnement de développement web "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									default:
+										break;
+								}
+								}
+
+								$("#logi1").html("<figure class='cardTechno'><img src='images/logi"+ nb +".png' alt='photo"+ nb +"'/> <figcaption class='overlay'> <p> "+ str +"</p> </figcaption> </figure>");
+								$("#logi2").html("<figure class='cardTechno'><img src='images/logi"+ nb2 +".png' alt='photo"+ nb2 +"'/> <figcaption class='overlay'> <p> "+ str1 +"</p> </figcaption> </figure>");
+								$("#logi3").html("<figure class='cardTechno'><img src='images/logi"+ nb3 +".png' alt='photo"+ nb3 +"'/> <figcaption class='overlay'> <p> "+ str2 +"</p> </figcaption> </figure>");
 
 							}
-							updateImageslang();
+							updateImageslogi();
 
 
 							$("#b3").on("click", function() {
 							cpt = (cpt - 1 + 10) % 10;
-            				updateImageslang();
+            				updateImageslogi();
         					});
 
 							$("#b4").on("click", function() {
             				cpt = (cpt + 1) % 10; // pour éviter les négatifs
-            				updateImageslang();
+            				updateImageslogi();
         					});
 
 						});
 					</script>
 			</div>
-
+<!-- Tableau de compétence E5-->
 			<div id="competenceE5">
 				<h2> Tableau de compétence </h2>
 				<br>
 				<table border="1">
 					<tr>
-						<th scope="col">Réalisation professionnelles</th>
-						<th  scope="col">Compétences mise en oeuvre</th>
+						<th scope="col" colspan="2"  >Réalisation professionnelles</th>
+
 						<th  scope="col">Période</th>
 						<th  scope="col">Gérer le patrimoine informatique</th>
 						<th scope="col">Répondre aux incidents et aux demandes d'assistance et d'évolution</th>
@@ -154,25 +363,14 @@
 					</tr>
 
 					<tr>
-						<td colspan="9">Exemple de réalisation au cours de mon BTS en formation </td>
+						<td colspan="9" class="exemple">Exemple de réalisation au cours de mon BTS en formation </td>
 					</tr>
 
 					<tr>
-						<td colspan="2">Installation et configuration de GLPI</td>
-						<td>18/11/24</td>
+						<td colspan="2" class="colortab1">Installation et configuration de GLPI</td>
+						<td class="colortab1">18/11/24</td>
 						<td></td>
-						<td><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/blob/main/reseau/TP_GLPI.pdf"><img src="images/git2.png" width="50" height="50"/></a></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td colspan="2">Installation et configuration d'un server Windows</td>
-						<td>27/01/25</td>
-						<td><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/blob/main/reseau/TP_Windows_server.pdf"><img src="images/git2.png" width="50" height="50"/></a></td>
-						<td></td>
+						<td class="casePleine"><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/blob/main/reseau/TP_GLPI.pdf"><img src="images/git2.png" width="50" height="50"/></a></td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -180,53 +378,9 @@
 					</tr>
 
 					<tr>
-						<td colspan="2"> AllergoMenu </td>
-						<td>janvier-février</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><a href="https://github.com/projetBTSSIO/AllergoMenu"><img src="images/git2.png" width="50" height="50"/></a></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td colspan="2">AllergoMenuWeb</td>
-						<td>avril-mai</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><a href="https://github.com/projetBTSSIO/AllergoMenuWeb"><img src="images/git2.png" width="50" height="50"/></a></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td colspan="2">Veille technologique</td>
-						<td>sep-juin</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><img src="images/etoile(1).png" width="50" height="50"/></td>
-					</tr>
-
-					<tr>
-						<td colspan="2">Linkedin</td>
-						<td>depuis Septembre</td>
-						<td><a href="www.linkedin.com/in/adèle-médoc-0158ba32b"><img src="images/logo-linkedin.png" width="50" height="50"/></a></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><a href="www.linkedin.com/in/adèle-médoc-0158ba32b"><img src="images/logo-linkedin.png" width="50" height="50"/></a></td>
-					</tr>
-
-					<tr>
-						<td colspan="2">La fleur</td>
-						<td>septembre</td>
-						<td><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/tree/main/HTML-PHP-CSS/Lafleur"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td colspan="2" class="colortab2">Installation et configuration d'un server Windows</td>
+						<td class="colortab2">27/01/25</td>
+						<td class="casePleine"><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/blob/main/reseau/TP_Windows_server.pdf"><img src="images/git2.png" width="50" height="50"/></a></td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -235,87 +389,272 @@
 					</tr>
 
 					<tr>
-						<td colspan="2"> Mooc de ANSSI SecNum</td>
-						<td>février</td>
+						<td colspan="2" class="colortab1"> AllergoMenu </td>
+						<td class="colortab1">janvier-février</td>
 						<td></td>
 						<td></td>
 						<td></td>
-						<td></td>
-						<td></td>
-						<td><a href="images/secnum.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
-					</tr>
-
-					<tr>
-						<td colspan="9">Exemple de réalisation au cours de mon BTS en stage </td>
-					</tr>
-
-					<tr>
-						<td colspan="2">Tempora - refonte de formulaire d'envoi de messages généraux</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
-						<td></td>
-						<td><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td colspan="2">Tempora - création d'une page pour l'historique des opérations</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
-						<td></td>
-						<td><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
-						<td></td>
-					</tr>
-
-					<tr>
-						<td colspan="9">Exemple de réalisation au cours de mon BTS en autodidacte </td>
-					</tr>
-
-					<tr>
-						<td colspan="2">mini-calculatrice python</td>
-						<td>septembre</td>
-						<td><a href="https://github.com/adele-medoc/mini_calculatrice"><img src="images/git2.png" width="50" height="50"/></a></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td class="casePleine"><a href="https://github.com/projetBTSSIO/AllergoMenu"><img src="images/git2.png" width="50" height="50"/></a></td>
 						<td></td>
 						<td></td>
 					</tr>
 
 					<tr>
-						<td colspan="2">site github page pour le portefolio</td>
-						<td>27/01/25</td>
-						<td><img src="images/etoile(1).png" width="50" height="50"/></td>
+						<td colspan="2" class="colortab2">AllergoMenuWeb</td>
+						<td class="colortab2">avril-mai</td>
 						<td></td>
 						<td></td>
 						<td></td>
-						<td><img src="images/etoile(1).png" width="50" height="50"/></td>
-						<td><img src="images/etoile(1).png" width="50" height="50"/></td>
+						<td class="casePleine"><a href="https://github.com/projetBTSSIO/AllergoMenuWeb"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2" class="colortab1">Veille technologique</td>
+						<td class="colortab1">sep-juin</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="casePleine"><img src="images/etoile(1).png" width="50" height="50"/></td>
+					</tr>
+
+					<tr>
+						<td colspan="2" class="colortab2">Linkedin</td>
+						<td class="colortab2">depuis Septembre</td>
+						<td class="casePleine"><a href="www.linkedin.com/in/adèle-médoc-0158ba32b"><img src="images/logo-linkedin.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="casePleine"><a href="www.linkedin.com/in/adèle-médoc-0158ba32b"><img src="images/logo-linkedin.png" width="50" height="50"/></a></td>
+					</tr>
+
+					<tr>
+						<td colspan="2" class="colortab1">La fleur</td>
+						<td class="colortab1">septembre</td>
+						<td class="casePleine"><a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/tree/main/HTML-PHP-CSS/Lafleur"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2" class="colortab2"> Mooc de ANSSI SecNum</td>
+						<td class="colortab2">février</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="casePleine"><a href="images/secnum.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+					</tr>
+
+					<tr>
+						<td colspan="9" class="exemple">Exemple de réalisation au cours de mon BTS en stage </td>
+					</tr>
+
+					<tr>
+						<td colspan="2" class="colortab1">Tempora - refonte de formulaire d'envoi de messages généraux</td>
+						<td class="colortab1"></td>
+						<td></td>
+						<td></td>
+						<td class="casePleine"><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td class="casePleine"><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2" class="colortab2">Tempora - création d'une page pour l'historique des opérations</td>
+						<td class="colortab2"></td>
+						<td></td>
+						<td></td>
+						<td class="casePleine"><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td class="casePleine"><a href="images/tempora.pdf"><img src="images/img.png" width="50" height="50"/></a></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="9" class="exemple">Exemple de réalisation au cours de mon BTS en autodidacte </td>
+					</tr>
+
+					<tr>
+						<td colspan="2" class="colortab1">mini-calculatrice python</td>
+						<td class="colortab1">septembre</td>
+						<td class="casePleine"><a href="https://github.com/adele-medoc/mini_calculatrice"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td colspan="2" class="colortab2">site github page pour le portefolio</td>
+						<td class="colortab2">27/01/25</td>
+						<td class="casePleine"><a href="https://github.com/adele-medoc/adele-medoc.github.io.git"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="casePleine"><a href="https://github.com/adele-medoc/adele-medoc.github.io.git"><img src="images/git2.png" width="50" height="50"/></a></td>
+						<td class="casePleine"><a href="https://github.com/adele-medoc/adele-medoc.github.io.git"><img src="images/git2.png" width="50" height="50"/></a></td>
 					</tr>
 
 				</table>
 			</div>
-
+<!--Veille Technologique-->
 			<div id="veille">
 				<h2> Veille Technologique </h2>
 				<br>
-				<h4>Qu'est-ce que la veille technologique ?</h4>
-				<p>La veille technologique est un processus de surveillance active des innovations, des évolutions techniques
-				et des tendances dans un domaine donné, afin d’anticiper les changements et d’adapter les stratégies d'une
-				entreprise ou d'un professionnel. Elle permet de rester compétitif en identifiant les opportunités et les menaces
-				liées aux nouvelles technologies.
-				</p>
+				<div id="defVeille">
+					<h4>Qu'est-ce que la veille technologique ?</h4>
+					<p>La veille technologique est un processus de surveillance active des innovations, des évolutions techniques
+					et des tendances dans un domaine donné, afin d’anticiper les changements et d’adapter les stratégies d'une
+					entreprise ou d'un professionnel. Elle permet de rester compétitif en identifiant les opportunités et les menaces
+					liées aux nouvelles technologies.
+					</p>
+				</div>
+				<h3>Outils de veille </h3>
+				<div id="outilsVeille">
+					<img src="images/feedly.png" alt="Logo Feedly">
+					<p>Dans le cadre de ma veille technologique, j'utilise principalement Feedly, un agrégateur de flux RSS et Atom, qui me permet de gérer et personnaliser mes abonnements à différentes sources d'information telles que l'ANSSI, Developpez.com, Red Hat ou encore IT-Connect.
+					</p>
+				</div>
 				<br>
-				<h4>Objets connectés : entre innovation technologique et menaces pour la vie privée</h4>
-				<p> L’Internet des Objets (IoT) connaît depuis plusieurs années une croissance fulgurante, bouleversant notre quotidien aussi bien dans la sphère personnelle que professionnelle. Des montres connectées aux assistants vocaux, en passant par les dispositifs médicaux ou les systèmes domotiques, les objets connectés s’imposent comme des outils incontournables d’une société toujours plus numérique.
-				Cependant, cette révolution technologique soulève de nombreuses interrogations, notamment en matière de sécurité et de protection des données personnelles. La multiplication des objets connectés accroît en effet la surface d’attaque potentielle pour les cybercriminels, mettant en danger la confidentialité des utilisateurs et l’intégrité des systèmes.
-				Dans ce contexte, il devient essentiel de comprendre les enjeux liés à la sécurisation de l’IoT, les vulnérabilités les plus courantes, et les solutions envisagées pour garantir un développement harmonieux et sécurisé de ces technologies.
-				</p>
+				<h3>Objets connectés : entre innovation technologique et menaces pour la vie privée</h3>
+				<div class="projetPro">
 
+					<p> L’Internet des Objets (IoT) connaît depuis plusieurs années une croissance fulgurante, bouleversant notre quotidien aussi bien dans la sphère personnelle que professionnelle. Des montres connectées aux assistants vocaux, en passant par les dispositifs médicaux ou les systèmes domotiques, les objets connectés s’imposent comme des outils incontournables d’une société toujours plus numérique.
+						<br><br>Cependant, cette révolution technologique soulève de nombreuses interrogations, notamment en matière de sécurité et de protection des données personnelles. La multiplication des objets connectés accroît en effet la surface d’attaque potentielle pour les cybercriminels, mettant en danger la confidentialité des utilisateurs et l’intégrité des systèmes.
+						<br><br>Dans ce contexte, il devient essentiel de comprendre les enjeux liés à la sécurisation de l’IoT, les vulnérabilités les plus courantes, et les solutions envisagées pour garantir un développement harmonieux et sécurisé de ces technologies.
+					</p>
+				</div>
+
+				<script>
+					let isShown = false;
+
+					function afficherArticle(){
+					  	if (!isShown) {
+							$('.cardVeille[name="hidden"]').css({"display":"flex"});
+							$("#buttonArticle span").text("Voir moins");
+							isShown = true;
+					  	} else {
+							$('.cardVeille[name="hidden"]').css({"display":"none"});
+							$("#buttonArticle span").text("Voir plus");
+							isShown = false;
+					  	}
+					}
+				</script>
+
+				<h3> Sources </h3>
+				<div id="article">
+					<div class="cardVeille">
+						<h5>Quand l’IoT révolutionne la sécurité informatique</h5>
+						<p>L'essor des objets connectés augmente les risques cyber. Mal sécurisés, ils deviennent des cibles faciles pour les attaques, comme l'illustre le botnet Mirai.</p>
+						<a href="https://www.serma-safety-security.com/quand-liot-revolutionne-la-securite-informatique/"> source : Serema</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>Qu’est-ce que la vulnérabilité des appareils IoT ?</h5>
+						<p>Les appareils IoT présentent des failles telles que mots de passe faibles et absence de mises à jour, les rendant vulnérables aux cyberattaques.</p>
+						<a href="https://www.fortinet.com/fr/resources/cyberglossary/iot-device-vulnerabilities/"> source : Fortinet</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>Protéger l’invisible : enjeux de cybersécurité dans l’ère des objets connectés</h5>
+						<p>La prolifération des objets connectés accroît la surface d'attaque. Une stratégie de cybersécurité est essentielle pour protéger les données et assurer la résilience numérique.</p>
+						<a href="https://www.groupeonepoint.com/fr/publications/proteger-linvisible-enjeux-de-cybersecurite-dans-lere-des-objets-connectes/"> source : Onepoint</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>La sécurité des objets connectés (IoT)</h5>
+						<p>Les objets connectés sont vulnérables aux cyberattaques. Adopter des mots de passe forts, mettre à jour régulièrement et limiter les connexions réseau sont des pratiques recommandées.</p>
+						<a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/securite-objets-connectes-iot"> source : cybermalveillance gouv</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>IoT & Sécurité : les faiblesses de l’IoT</h5>
+						<p>L'IoT souffre de failles comme l'absence de mises à jour et des protocoles non sécurisés. Une approche de sécurité dès la conception est cruciale pour protéger ces dispositifs.</p>
+						<a href="https://www.wixalia.com/actualites/iot-securite-les-faiblesses-de-liot/"> source : Wixalia</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>Qu’est-ce que l’internet of things ?</h5>
+						<p>L'Internet des objets (IoT) connecte des appareils pour collecter et échanger des données. Il transforme divers secteurs mais nécessite une sécurité robuste pour protéger les informations.</p>
+						<a href="https://www.oracle.com/fr/internet-of-things/"> source : Oracle</a>
+					</div>
+					<div class="cardVeille">
+						<h5>L'industrie néglige la sécurité des OT et de l'IoT</h5>
+						<p>De nombreuses industries sous-estiment la sécurité des technologies opérationnelles (OT) et de l'IoT, exposant leurs systèmes à des risques accrus de cyberattaques.</p>
+						<a href="https://b2b-cyber-security.de/fr/L%27industrie-n%C3%A9glige-la-s%C3%A9curit%C3%A9-des-OT-et-de-l%27IoT/"> source : B2B Cyber Security</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>L'IoT, ce maillon faible dans la cybersécurité bientôt plus réglementée</h5>
+						<p>Face aux vulnérabilités de l'IoT, des réglementations plus strictes sont envisagées pour renforcer la cybersécurité et protéger les infrastructures critiques.</p>
+						<a href="https://www.lemondeinformatique.fr/les-dossiers/lire-l-iot-ce-maillon-faible-dans-la-cybersecurite-bientot-plus-reglementee-1546.html"> source : Le Monde Informatique</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>Remote-controlled sex toys could be hacked to harm users, UK government warns</h5>
+						<p>Les sex toys connectés présentent des risques de piratage pouvant entraîner des préjudices physiques et psychologiques. Le gouvernement britannique alerte sur ces dangers.</p>
+						<a href="https://www.independent.co.uk/tech/sex-toys-hacked-remote-control-b2677845.html"> source : Independent</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>Security for IoT devices</h5>
+						<p>Sécuriser les appareils IoT implique une approche holistique incluant des mises à jour régulières, une authentification forte et une surveillance continue pour prévenir les intrusions.</p>
+						<a href="https://www.redhat.com/fr/topics/security/security-for-iot-devices"> source : Red Hat</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Recommandations relatives à la sécurité des objets connectés</h5>
+						<p>L'ANSSI recommande des pratiques telles que la mise à jour régulière des dispositifs, l'utilisation de mots de passe robustes et la limitation des connexions pour sécuriser l'IoT.</p>
+						<a href="https://cyber.gouv.fr/publications/recommandations-relatives-la-securite-des-systemes-dobjets-connectes"> source : ANSSI</a>
+					</div>
+					<div class="cardVeille" name="hidden">
+						<h5>CES 2025 : les entreprises intègrent l'IA dans une gamme étendue, malgré les risques en matière de protection de la vie privée</h5>
+						<p>l'intégration de l'IA dans divers gadgets soulève des préoccupations concernant la protection de la vie privée et la sécurité des données personnelles.</p>
+						<a href="https://hardware.developpez.com/actu/366398/L-IA-au-coeur-du-CES-2025-les-entreprises-integrent-l-IA-dans-une-gamme-etendue-de-gadgets-dont-des-refrigerateurs-et-des-televiseurs-malgre-les-risques-en-matiere-de-protection-de-la-vie-privee/"> source : developpez.com</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Les téléviseurs sans OS et connexion Internet méritent-ils de faire leur retour ? Les téléviseurs intelligents sont comme des chevaux de Troie dans les domiciles</h5>
+						<p>Les téléviseurs intelligents, connectés à Internet, peuvent collecter des données sensibles, posant des risques pour la vie privée des utilisateurs.</p>
+						<a href="https://www.developpez.com/actu/365989/Les-televiseurs-sans-OS-et-connexion-Internet-meritent-ils-de-faire-leur-retour-Les-televiseurs-intelligents-sont-comme-des-chevaux-de-Troie-dans-les-domiciles-des-tiers-qui-en-font-l-acquisition/"> source : developpez.com</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Aspirateur robot piraté</h5>
+						<p>Des aspirateurs robots ont été piratés pour proférer des insultes racistes, illustrant les dangers liés à la sécurité des objets connectés domestiques.</p>
+						<a href="https://www.numerama.com/cyberguerre/1825108-un-aspirateur-robot-ecovacs-hacke-hurle-des-injures-racistes-que-sest-il-passe.html"> source : Numerama</a><br>
+						<a href="https://www.cnetfrance.fr/news/des-robots-aspirateurs-se-font-pirater-et-diffusent-des-insultes-racistes-aux-utilisateurs"> source : Cnet</a><br>
+						<a href="https://www.mac4ever.com/domotique/184674-est-ce-que-votre-aspirateur-robot-vous-espionne-en-plus-d-etre-raciste"> source : Mac4ever</a><br>
+						<a href="https://www.notebookcheck.biz/Selon-un-nouveau-rapport-les-cameras-et-les-haut-parleurs-d-un-aspirateur-robot-d-une-marque-populaire-ont-ete-pirates.897558.0.html"> source : NotebookCheck</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>La technologie Smart Home est moins sûre que vous ne le pensez selon une nouvelle étude de l'université Northeastern</h5>
+						<p>Une étude révèle que de nombreux appareils de la maison intelligente présentent des vulnérabilités, exposant les utilisateurs à des risques de piratage et de violation de la vie privée.</p>
+						<a href="https://www.serma-safety-security.com/quand-liot-revolutionne-la-securite-informatique/"> source : Serema</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>VTech se fait hacker les données de 200 000 enfants</h5>
+						<p>En 2015, VTech a subi une cyberattaque compromettant les données personnelles de 200 000 enfants, mettant en lumière les risques liés à la sécurité des jouets connectés.</p>
+						<a href="https://siecledigital.fr/2015/12/01/vtech-se-fait-hacker-les-donnees-de-200-000-enfants/ "> source : SiecleDigital</a>
+						<a href="https://www.usine-digitale.fr/article/les-donnees-de-6-4-millions-d-enfants-piratees-depuis-le-site-du-fabricant-de-jouets-vtech.N367457">source : L'Unsine Digitale</a>
+					</div>
+
+					<button id="buttonArticle" onclick="afficherArticle()"><span> Voir plus</span></button>
+
+				</div>
 			</div>
 		</div>
 	</body>
