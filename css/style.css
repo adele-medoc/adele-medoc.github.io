@@ -6,6 +6,7 @@ body{
     margin: 0px;
     display: grid;
     height: 100%;
+    overflow-x: hidden;
 }
 #top{
     background-image: url("../images/img4.png");
@@ -20,7 +21,7 @@ body{
     margin-bottom: 100px;
 }
 #page{
-    padding-left: 160px;
+    padding-left: 9em;
     flex-grow: 1;
     display:grid;
 }
@@ -29,7 +30,7 @@ h1{color: white;}
 h2{
     color: #11736C;
     font-size: 32px;
-    margin: 0px 0px 0px 60px;
+    margin: 0px 0px 0px 70px;
     padding: 25px 0 0 0;
 }
 
@@ -46,6 +47,7 @@ img {
     height: auto;
     max-width: 512;
 }
+
 /*********************************** barre navigation ********************************************/
 nav { background-color: #21AB99;
     margin: 0px;
@@ -98,7 +100,7 @@ li a:hover {color:#FFFFFF;
   padding-block-end: 20px;
   border-radius: 60px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin: 30px 70px 7px 20px;
+  margin: 30px 2em 7px 4em;
   padding: 15px 4px 15px 2px;
 }
 #Apropos p {
@@ -148,7 +150,7 @@ li a:hover {color:#FFFFFF;
 #divParcours1{justify-self: end;
     grid-column-start: 1;
     grid-row-start: 1;
-    margin-right: -15px;
+    margin-right: -70px;
     margin-top: 79px;
 }
 #divParcours1 h5{color: #006A89;}
@@ -158,14 +160,14 @@ li a:hover {color:#FFFFFF;
 #divParcours2{justify-self: end;
     grid-column-start: 1;
     grid-row-start: 3;
-    margin-right: -15px;
+    margin-right: -70px;
     margin-top: 109px;
 }
 #divParcours3{grid-column-start: 3;
     grid-row-start: 2;
     justify-self: first baseline;
     margin-top: 94px;
-    margin-left: -21px;
+    margin-left: -70px;
 }
 
 .card{
@@ -344,47 +346,142 @@ button:hover span {
 #technologies{margin: 35px 0 45px 0;}
 
 /***********************************tableau competence********************************************/
+#competenceE5{
+    display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-left: 3em;
+  width: 94%;
+  margin-bottom: 5em;
+}
+.projectCard{
+background-color:white;
+  display: flex;
+  border-radius: 20px;
+  max-width: 100%;
+  margin: 10px 10px 10px 10px;
+  flex-direction: column;
+  border: 2px solid #C52A1B;
 
-#competenceE5{margin: 0 10px 60px 0px;}
-
-table{border-collapse: collapse;
-    text-decoration: solid;
-    border: none;
-    margin-left: 1px;
-    margin-right: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-td{ text-align: center;
-    border-color: black;
+
+.projectCard:hover {
+  transform: translateY(-5px);
 }
 
-th{background-color: #C52A1B;
-   color: #FFFFFF;
-   border: none;
-   width: 12%;
+.image-projet{
+  object-fit: cover;
+
+    width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picto-projet {
+  width: 80px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
 }
 
-td img{display: block;
-    margin-left: auto;
-    margin-right: auto;
+.projectCard h4{
+  margin: 8px 0px 2px 0px;
+  text-align: center;
 }
 
-.exemple{background-color: #E94F1A;
-        border: none;
-        color: #ffffff;
-        text-decoration: solid;
-}
-.colortab1 {background-color: #EB6B1B;
-        border: none;}
-.colortab2{background-color: #EC861C;
-    border: none;
-}
-.casePleine:hover {background-color:#E94F1A;
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
+.techno{
+    font-weight: bold;
+    margin: -5px 0px 5px 0px;
 }
 
+.projectCard h6{
+  margin: 2px 0px 8px 0px;
+  text-align: center;
+
+}
+
+.projectCard div{
+  text-align: center;
+}
+.projectCard p{
+  grid-column-start: 2;
+  grid-row-start: 4;
+  text-align: justify;
+  margin: 2px 8px 2px 8px;
+}
+
+
+.projectCard a {
+    display: block;
+   margin-top: auto;
+  margin-bottom: 12px;
+  text-align: center;
+  padding: 6px 16px;
+  background-color: #C52A1B;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectCard a:hover {
+  background-color: #a62316;
+}
+            /**********************diapo***********************/
+
+.diapo-cadre {
+  display: inline-block;
+  position: relative;     /* pour servir de référent */
+}
+.diapo-cadre img {
+  display: block;         /* supprime l'espace sous les images */
+}
+.diapo-cadre > * + * {    /* tous les enfants directs sauf le 1st */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#diapo > * {             /* tous les enfants directs */
+  opacity: 1;
+  transition: opacity 1s;
+}
+#diapo > :last-child {   /* uniquement le dernier enfant direct */
+  opacity: 0;
+}
+
+#diapo1 > * {             /* tous les enfants directs */
+  opacity: 1;
+  transition: opacity 1s;
+}
+#diapo1 > :last-child {   /* uniquement le dernier enfant direct */
+  opacity: 0;
+}
+
+#diapo2 > * {             /* tous les enfants directs */
+  opacity: 1;
+  transition: opacity 1s;
+}
+#diapo2 > :last-child {   /* uniquement le dernier enfant direct */
+  opacity: 0;
+}
+
+#diapo3 > * {             /* tous les enfants directs */
+  opacity: 1;
+  transition: opacity 1s;
+}
+#diapo3 > :last-child {   /* uniquement le dernier enfant direct */
+  opacity: 0;
+}
 /***********************************Veille techno********************************************/
 
 #sujetVeille{
@@ -436,8 +533,9 @@ td img{display: block;
 
 #article{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 25% 25% 25% 25%;
+    padding-left: 3em;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    width: 94%;
 }
 .cardVeille{
     display: flex;
@@ -492,4 +590,12 @@ td img{display: block;
   margin: 20px 0 50px 0;
   justify-self: center;
   grid-column-start: 5;
+}
+
+/***********************************Footer********************************************/
+footer{
+    margin: 0 0 0 9em;
+  background: chocolate;
+  padding: 20px 0px 0 19px;
+  text-align: center;
 }
