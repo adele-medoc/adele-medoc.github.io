@@ -1,0 +1,629 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link href="css/style.css" rel="stylesheet">
+		<title> Portfolio - Adèle Médoc </title>
+	</head>
+
+	<body>
+		<!-- on inclut jQuery via CDN -->
+		<script src="jquery-3.7.1.js"></script>
+
+		<!-- Menu de navigation -->
+		<nav class="menu">
+			<ul>
+			  <li><a href="#top" target="_top">Accueil</a></li>
+			  <li><a href="#titreApropos">À propos</a></li>
+			  <li><a href="#titreParcours">Mon parcours</a></li>
+			  <li><a href="#technologies">Technologies</a></li>
+			  <li><a href="#projet">Projets</a></li>
+			  <li><a href="#veille">Veille Technologique</a></li>
+			</ul>
+		</nav>
+		<div id="bande1" class="menu"></div>
+		<div id="bande2" class="menu"></div>
+
+
+		<div id="page">
+			<div id="top">
+
+					<h1>Adèle Médoc</h1>
+				<h1> Bienvenue sur mon portfolio</h1>
+
+			</div>
+<!-- À propos de moi - présentation -->
+			<h2 id="titreApropos"> À propos de moi </h2>
+			<div id="Apropos">
+				<p>Je m’appelle Adèle, j’ai 26 ans et je suis actuellement en BTS SIO option slam, une formation continue d'une année au GRETA de Quimper.
+					J’ai commencé cette formation dans le cadre d’une reconversion professionnelle, après avoir exercé le métier d’infirmière.
+					<br>
+					<br>
+					Mon attrait pour la programmation a commencé lorsque j'ai découvert le langage Python.
+					J'ai réalisé quelques projets : comme une calculatrice et des petits programmes permettant, par exemple, de vérifier si un nombre est premier ou d’afficher des motifs à l’aide de boucles.
+					<br>
+					<br>
+					Ces expériences m'ont permis de comprendre l'importance de la réflexion dans le développement informatique. La résolution de problèmes et la structuration de la pensée pour trouver des solutions efficaces sont des aspects qui me plaisent particulièrement.
+                    En outre, j'apprécie le fait que le développement informatique ne soit pas seulement technique, mais aussi créatif. Chaque projet, même simple, est une occasion d'exprimer ma créativité et d'apprendre de nouvelles choses.
+				</p>
+				<img src="images/hw.png" alt="image de présentation"/>
+			</div>
+			<div id="contact">
+				<button class="buttonContact" onclick="window.open('images/cv.pdf', '_blank')"><span> Voir mon CV</span> </button>
+				<button class="buttonContact" onclick="location.href='https://www.linkedin.com/in/ad%C3%A8le-m%C3%A9doc-0158ba32b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app';"><span> Voir mon Linkedin</span> </button>
+				<button class="buttonContact" onclick="location.href='https://github.com/adele-medoc';"><span> Voir mon GitHub</span> </button>
+			</div>
+
+
+<!-- Mon parcours en informatique + projet pro -->
+			<h2 id="titreParcours"> Mon parcours en informatique </h2>
+			<div id="parcours">
+				<div id="divParcours1" class="card" > Tempora SAS </div>
+				<div id="divParcours2" class="card"> RBI Informatique</div>
+				<img src="images/barre.png"/>
+				<div id="divParcours3" class="card"> BTS SIO SLAM </div>
+
+			</div>
+			<div class="projetPro">
+				<h3> Projet professionnel </h3>
+				<p>
+					Dans le cadre de mon parcours, j'ai choisi de m'orienter vers une <strong>alternance</strong> pour obtenir un
+					<strong>titre professionnel de niveau licence</strong> en tant que <strong>Concepteur Développeur d'Application</strong>.
+				</p>
+				<ul>
+					<li> <img src="images/arc.png" width="40" height="40"/>Approfondir mes compétences techniques</li>
+					<li><img src="images/arc.png" width="40" height="40"/>Gagner en autonomie grâce à des missions réelles</li>
+					<li><img src="images/arc.png" width="40" height="40"/>M’immerger dans une équipe professionnelle</li>
+					<li><img src="images/arc.png" width="40" height="40"/>Préférence pour le développement logiciel</li>
+				</ul>
+			</div>
+			<script>
+				function afficherParcours(){
+					$( "#divParcours1" ).hover(
+  						function() {
+							$( this ).append( $( "<img class='card' src='images/tempora.png' alt='logo'/>" ) );
+    						$( this ).append( $( " <h5 class='card'>Brest | décembre 2024 - juin 2025</h5> <p class='card'> Lors de mon stage chez Tempora, j’ai participé à deux projets : <br> – Refonte d’une IHM pour l’envoi de messages avec ajout de fonctionnalités (frontend + backend).<br> – Création de l'historique des opérations de l'application pour la nouvelle version de tempora avec Angular et Clarity, backend en Scala.<br> Compétences développées : JavaScript, TypeScript, Angular, Scala, SQL, HTML/CSS. <br> </p><a href='https://tempora.fr/solution-logiciel-de-secretariat'>tempora.fr </a>") );
+
+						},
+  						function () {
+    						$(this).find("p").remove();
+							$(this).find("h5").remove();
+							$(this).find("img").remove();
+							$(this).find("a").remove();
+  						}
+					);
+					$( "#divParcours2" ).hover(
+  						function() {
+							$( this ).append( $( "<img class='card' src='images/rbi.jpg' alt='logo'/>" ) );
+    						$( this ).append( $( "<h5 class='card'> Rennes | Mars 2024 </h5> <p class='card'> Lors de mon stage de reconversion chez RBI Informatique, j’ai observé et collaboré avec les équipes de support technique et de développement. <br> J’ai pu découvrir les outils et méthodes utilisés dans un environnement professionnel autour de la gestion de solutions ERP (PGI) et de logiciels sur mesure. <br>Compétences développées : compréhension des environnements ERP, gestion du support client, découverte du cycle de vie d’un projet applicatif.</p><a href=''>rbi-informatique.fr </a>" ) );
+  						},
+  						function () {
+    						$(this).find("p").remove();
+							$(this).find("h5").remove();
+							$(this).find("img").remove();
+							$(this).find("a").remove();
+  						}
+					);
+					$( "#divParcours3" ).hover(
+  						function() {
+    						$( this ).append( $( "<img class='card' src='images/greta.png' alt='logo'/>" ) );
+							$( this ).append( $( "<h5 class='card'>Quimper | septempre 2024 - juin 2025 </h5> <p class='card'>J’ai suivi un BTS SIO option SLAM au GRETA de Quimper, où j’ai acquis des compétences solides en développement web et applicatif, bases de données et programmation orientée objet.<br> Compétences développées : développement frontend et backend, modélisation UML, conception et manipulation de bases de données, algorithmique, HTML/CSS, JavaScript, PHP, Java, SQL.</p><a href='https://greta-bretagne.ac-rennes.fr/portail/web/notre-reseau/greta-cfa-de-bretagne-occidentale/agence-de-quimper'>Greta Quimper</a>" ) );
+  						},
+  						function () {
+    						$(this).find("p").remove();
+							$(this).find("h5").remove();
+							$(this).find("img").remove();
+							$(this).find("a").remove();
+						}
+					);
+				}
+				afficherParcours();
+			</script>
+<!-- logiciel et langages -->
+			<div id="technologies">
+
+					<h2> Technologies </h2>
+
+					<h3> langages </h3>
+					<div id="langage">
+						<button id="b1"><span>←</span></button>
+						<div id="lang1"></div>
+						<div id="lang2"></div>
+						<div id="lang3"></div>
+						<button id="b2"><span>→</span></button>
+
+					</div>
+					<script>
+						$("langage").ready(function() {
+							let cpt=0
+							//fonction pour changer les images dans le caroussel langage
+							function updateImageslang() {
+
+								nb = cpt % 9;
+								nb2 = (cpt+1)% 9;
+								nb3 = (cpt+2)% 9;
+
+								let str="";
+								let str1="";
+								let str2="";
+								let tab = [nb,nb2,nb3];
+
+								for (i=0;i<3;i++){
+									key = tab[i];
+									console.log("i="+i+"key="+key)
+									switch (key) {
+									case 0:
+										reponse = "<b> Java </b> <br> JavaFX,JDBC"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 1:
+										reponse= "<b> C++ </b> <br>"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 2:
+										reponse="<b> CSS </b> <br> LESS,SCSS"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 3:
+										reponse = "<b> HTML </b> <br>"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 4:
+										reponse = "<b> JavaScript </b> <br> Jquery,TypeScript"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 5:
+										reponse="<b> PL/SQL </b> <br>Procedural Language / Structured Query Language "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 6:
+										reponse = "<b> Python </b> "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 7:
+										reponse = "<b> Scala </b><br> "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 8:
+										reponse= "<b> Angular </b> <br> ClarityDesign"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									default:
+										break;
+								}
+								}
+
+								$("#lang1").html("<figure class='cardTechno'><img src='images/lang"+ nb +".png' alt='photo"+ nb +"'/> <figcaption class='overlay'> <p> "+ str +"</p> </figcaption> </figure>");
+								$("#lang2").html("<figure class='cardTechno'><img src='images/lang"+ nb2 +".png' alt='photo"+ nb2 +"'/> <figcaption class='overlay'> <p> "+ str1 +"</p> </figcaption> </figure>");
+								$("#lang3").html("<figure class='cardTechno'><img src='images/lang"+ nb3 +".png' alt='photo"+ nb3 +"'/> <figcaption class='overlay'> <p> "+ str2 +"</p> </figcaption> </figure>");
+
+							}
+							updateImageslang();
+
+
+							$("#b1").on("click", function() {
+							cpt = (cpt - 1 + 9) % 9;
+            				updateImageslang();
+        					});
+
+							$("#b2").on("click", function() {
+            				cpt = (cpt + 1) % 9; // pour éviter les négatifs
+            				updateImageslang();
+        					});
+
+						});
+					</script>
+
+					<h3> logiciels utilisés </h3>
+					<div id="logiciel">
+						<button id="b3"><span>←</span></button>
+						<div id="logi1"></div>
+						<div id="logi2"></div>
+						<div id="logi3"></div>
+						<button id="b4"><span>→</span></button>
+					</div>
+					<script>
+						$("logiciel").ready(function() {
+							let cpt=0
+							//fonction pour changer les images dans le caroussel logiciel
+							function updateImageslogi() {
+
+								nb = cpt % 10;
+								nb2 = (cpt+1)% 10;
+								nb3 = (cpt+2)% 10;
+
+								let str="";
+								let str1="";
+								let str2="";
+								let tab = [nb,nb2,nb3];
+
+								for (i=0;i<3;i++){
+									key = tab[i];
+									console.log("i="+i+"key="+key)
+									switch (key) {
+									case 0:
+										reponse = "<b> Eclipse </b> <br> IDE Java"
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 1:
+										reponse= "<b> Git </b><br> logiciel de gestion de versions "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 2:
+										reponse="<b> Laragon </b> <br> environnement de développement web "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 3:
+										reponse = "<b> github </b><br>plateforme open source de gestion de versions et de collaboration "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 4:
+										reponse = "<b> PHP My Admin </b> <br> application Web de gestion pour les systèmes de gestion de base de données MySQL "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 5:
+										reponse="<b> RAD Studio </b><br> IDE "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 6:
+										reponse = "<b> Thonny </b><br> IDE Python "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 7:
+										reponse = "<b> Visual Studio </b><br> éditeur de code "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 8:
+										reponse= "<b> Visual Studio Code </b><br> IDE "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									case 9:
+										reponse= "<b> Wamp </b> <br> environnement de développement web "
+										if (i==0){str = reponse}
+										if (i==1){str1 = reponse}
+										if (i==2){str2 = reponse}
+										break;
+									default:
+										break;
+								}
+								}
+
+								$("#logi1").html("<figure class='cardTechno'><img src='images/logi"+ nb +".png' alt='photo"+ nb +"'/> <figcaption class='overlay'> <p> "+ str +"</p> </figcaption> </figure>");
+								$("#logi2").html("<figure class='cardTechno'><img src='images/logi"+ nb2 +".png' alt='photo"+ nb2 +"'/> <figcaption class='overlay'> <p> "+ str1 +"</p> </figcaption> </figure>");
+								$("#logi3").html("<figure class='cardTechno'><img src='images/logi"+ nb3 +".png' alt='photo"+ nb3 +"'/> <figcaption class='overlay'> <p> "+ str2 +"</p> </figcaption> </figure>");
+
+							}
+							updateImageslogi();
+
+
+							$("#b3").on("click", function() {
+							cpt = (cpt - 1 + 10) % 10;
+            				updateImageslogi();
+        					});
+
+							$("#b4").on("click", function() {
+            				cpt = (cpt + 1) % 10; // pour éviter les négatifs
+            				updateImageslogi();
+        					});
+
+						});
+					</script>
+			</div>
+<!-- Tableau de compétence E5-->
+			<h2 id="projet"> Projets </h2>
+
+			<div id="competenceE5">
+
+				<div class="projectCard" name="perso">
+					<div id="diapo" class="diapo-cadre">
+  						<img src="images/mini_cal1.PNG" class="image-projet"/>
+  						<img src="images/mini_cal2.PNG" class="image-projet"/>
+					</div>
+  					<h4>mini-calculatrice </h4>
+  					<h6>Août 2024</h6>
+  					<div class="techno"> python </div>
+  					<p>Ce programme permet d'effectuer des opérations mathématiques entre deux nombres réels : addition, soustraction, multiplication et division (avec gestion de la division par zéro). L'utilisateur entre deux nombres et choisit une opération via un menu. Le résultat est calculé et affiché en fonction du choix.</p>
+					<a href="https://github.com/adele-medoc/mini_calculatrice">Le code ici !</a>
+				</div>
+
+				<div class="projectCard" name="ecole">
+  					<div id="diapo1" class="diapo-cadre">
+  						<img src="images/lafleur1.PNG" class="image-projet"/>
+  						<img src="images/lafleur2.PNG" class="image-projet"/>
+						<img src="images/lafleur3.PNG" class="image-projet">
+					</div>
+  					<h4>La fleur</h4>
+  					<h6>Sep 2024</h6>
+  					<div class="techno"> PHP, SQL, phpmyadmin, HTML/CSS </div>
+  					<p>Réalisation d'un site en html/css et PHP, avec une base de données en MySQL</p>
+					<a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/tree/main/HTML-PHP-CSS/Lafleur">Le code ici !</a>
+				</div>
+
+				<div class="projectCard" name="ecole">
+  					<img src="images/gallery.png" class="picto-projet"/>
+  					<h4>Installation et configuration de GLPI</h4>
+  					<h6>Nov 2024</h6>
+  					<div class="techno"> GLPI, WAMP, phpmyadmin</div>
+  					<p>Ce projet consistait à déployer l’outil de gestion de parc informatique et de service d’assistance GLPI en environnement local à l’aide de WAMP.</p>
+					<a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/blob/main/reseau/TP_GLPI.pdf">Le compte rendu ici !</a>
+				</div>
+
+				<div class="projectCard" name="entreprise">
+  					<img src="images/gallery.png" class="picto-projet"/>
+  					<h4>Tempora 1er projet</h4>
+  					<h6>Dec 2024</h6>
+  					<div class="techno"> HTML, CSS, LESS, JavaScript, Jquery, git/gitlab</div>
+  					<p>Dans le cadre de ce projet, j’ai participé à la reprise d’un projet existant en apportant des améliorations à l’interface homme-machine, notamment par la refonte d’un formulaire avec l’ajout de nouvelles fonctionnalités. J’ai également contribué à la modélisation du projet en réalisant des diagrammes UML (cas d’utilisation, classes, séquence) ainsi que des maquettes d’interface, afin de mieux structurer le développement et améliorer l’expérience utilisateur.</p>
+					<a href="images/tempora.pdf">Les images ici !</a>
+				</div>
+
+				<div class="projectCard" name="ecole">
+  					<img src="images/gallery.png" class="picto-projet"/>
+  					<h4>Installation et configuration d’un réseau d’entreprise sous Windows Server</h4>
+  					<h6>Jan 2025</h6>
+  					<div class="techno">Windows Server 2016</div>
+  					<p>Ce projet avait pour objectif de mettre en place un réseau d’entreprise en utilisant Windows Server 2016 et Windows 10 pour le poste client. J’ai installé et configuré Active Directory, le serveur DNS et le serveur DHCP, puis intégré un poste client au domaine. J’ai également créé une arborescence d’unités d’organisation, les comptes utilisateurs, groupes de sécurité, et attribué des droits d’accès personnalisés aux partages de fichiers selon les profils métier. </p>
+					<a href="https://github.com/adele-medoc/projet-BTS-SIO-2024-25/blob/main/reseau/TP_Windows_server.pdf">Le compte rendu ici !</a>
+				</div>
+
+				<div class="projectCard" name="ecole">
+  					<div id="diapo2" class="diapo-cadre">
+  						<img src="images/allergoMenu1.png" class="image-projet"/>
+  						<img src="images/allergoMenu2.PNG" class="image-projet"/>
+						<img src="images/allergoMenu3.PNG" class="image-projet"/>
+						<img src="images/allergoMenu4.PNG" class="image-projet"/>
+						<img src="images/allergoMenu5.PNG" class="image-projet"/>
+						<img src="images/allergoMenu6.PNG" class="image-projet"/>
+					</div>
+  					<h4>AllergoMenu</h4>
+  					<h6>Fev 2025</h6>
+  					<div class="techno">Java 11, JavaFx, JDBC, jBCrypt, git/github </div>
+  					<p>AllergoMenu est une application Java développée en groupe dans le cadre du BTS SIO, permettant aux utilisateurs de trouver et publier des recettes, ainsi que générer automatiquement des menus adaptés à leurs allergies ou préférences alimentaires. Le projet suit une architecture MVC</p>
+					<a href="https://github.com/projetBTSSIO/AllergoMenu">Le code ici !</a>
+				</div>
+
+				<div class="projectCard" name="entreprise">
+  					<img src="images/gallery.png" class="picto-projet"/>
+  					<h4>Tempora 2ème projet</h4>
+  					<h6>Mars 2025</h6>
+  					<div class="techno">Angular, ClarityDesign, JavaScript, TypeScript, Scala, Postman, git/gitlab</div>
+  					<p>Dans ce projet, j’ai contribué au développement de la page des logs dans la nouvelle version de l’application, en utilisant le framework Clarity Design avec Angular pour le front-end. Côté back-end, l’API était développée en Scala, et j’ai utilisé Postman pour tester les requêtes HTTP et valider les échanges avec le serveur.</p>
+					<a href="images/tempora2.pdf"> Les images ici !</a>
+				</div>
+
+				<div class="projectCard" name="ecole">
+  					<div id="diapo3" class="diapo-cadre">
+  						<img src="images/allergoMenuWeb1.png" class="image-projet"/>
+  						<img src="images/allergoMenuWeb2.PNG" class="image-projet"/>
+						<img src="images/allergoMenuWeb3.PNG" class="image-projet"/>
+						<img src="images/allergoMenuWeb4.PNG" class="image-projet"/>
+						<img src="images/allergoMenuWeb5.PNG" class="image-projet"/>
+						<img src="images/allergoMenuWeb6.PNG" class="image-projet"/>
+						<img src="images/allergoMenuWeb7.PNG" class="image-projet">
+					</div>
+  					<h4>AllergoMenuWeb</h4>
+  					<h6>Avril 2025</h6>
+  					<div class="techno">Java EE, JDBC, jBCrypt, git/github </div>
+  					<p>Pour ce projet, nous avons travaillé sur AllergoMenuWeb, une version web de l’application AllergoMenu développée en Java avec une interface utilisateur enrichie par du CSS.</p>
+					<a href="https://github.com/projetBTSSIO/AllergoMenuWeb">Le code ici !</a>
+				</div>
+
+				<div class="projectCard" name="perso">
+  					<img src="images/site-internet.png" class="picto-projet"/>
+  					<h4>site github page pour le portefolio</h4>
+  					<h6>Avril 2025</h6>
+  					<div class="techno">JavaScript, jQuery, HTML/CSS, GitHub page, git/github </div>
+  					<p>Ce site web personnel a été conçu comme portfolio interactif afin de présenter mon parcours, mes compétences et mes projets réalisés dans le cadre du BTS SIO option SLAM. Développé avec HTML, CSS et JavaScript, il est entièrement responsive et hébergé sur GitHub Pages.</p>
+					<a href="https://github.com/adele-medoc/adele-medoc.github.io.git">Le code ici !</a>
+				</div>
+
+			</div>
+
+			<script>
+				function runDiaporama(idElement) {
+  				const elemDiapo = document.getElementById(idElement);
+  				elemDiapo.append(elemDiapo.firstElementChild);
+  				setTimeout(() => runDiaporama(idElement), 2500);
+				}
+				runDiaporama("diapo");
+				runDiaporama("diapo1");
+				runDiaporama("diapo2");
+				runDiaporama("diapo3");
+			</script>
+
+<!--Veille Technologique-->
+			<div id="veille">
+				<h2> Veille Technologique </h2>
+				<br>
+				<div id="defVeille">
+					<h4>Qu'est-ce que la veille technologique ?</h4>
+					<p>La veille technologique est un processus de surveillance active des innovations, des évolutions techniques
+					et des tendances dans un domaine donné, afin d’anticiper les changements et d’adapter les stratégies d'une
+					entreprise ou d'un professionnel. Elle permet de rester compétitif en identifiant les opportunités et les menaces
+					liées aux nouvelles technologies.
+					</p>
+				</div>
+				<h3>Outils de veille </h3>
+				<div id="outilsVeille">
+					<img src="images/feedly.png" alt="Logo Feedly">
+					<p>Dans le cadre de ma veille technologique, j'utilise principalement Feedly, un agrégateur de flux RSS et Atom, qui me permet de gérer et personnaliser mes abonnements à différentes sources d'information telles que l'ANSSI, Developpez.com, Red Hat ou encore IT-Connect.
+					</p>
+				</div>
+				<br>
+				<h3>Objets connectés : entre innovation technologique et menaces pour la vie privée</h3>
+				<div class="projetPro">
+
+					<p> L’Internet des Objets (IoT) connaît depuis plusieurs années une croissance fulgurante, bouleversant notre quotidien aussi bien dans la sphère personnelle que professionnelle. Des montres connectées aux assistants vocaux, en passant par les dispositifs médicaux ou les systèmes domotiques, les objets connectés s’imposent comme des outils incontournables d’une société toujours plus numérique.
+						<br><br>Cependant, cette révolution technologique soulève de nombreuses interrogations, notamment en matière de sécurité et de protection des données personnelles. La multiplication des objets connectés accroît en effet la surface d’attaque potentielle pour les cybercriminels, mettant en danger la confidentialité des utilisateurs et l’intégrité des systèmes.
+						<br><br>Dans ce contexte, il devient essentiel de comprendre les enjeux liés à la sécurisation de l’IoT, les vulnérabilités les plus courantes, et les solutions envisagées pour garantir un développement harmonieux et sécurisé de ces technologies.
+					</p>
+				</div>
+
+				<script>
+					let isShown = false;
+
+					function afficherArticle(){
+					  	if (!isShown) {
+							$('.cardVeille[name="hidden"]').css({"display":"flex"});
+							$("#buttonArticle span").text("Voir moins");
+							isShown = true;
+					  	} else {
+							$('.cardVeille[name="hidden"]').css({"display":"none"});
+							$("#buttonArticle span").text("Voir plus");
+							isShown = false;
+					  	}
+					}
+				</script>
+
+				<h3> Sources </h3>
+				<div id="article">
+					<div class="cardVeille">
+						<h5>Quand l’IoT révolutionne la sécurité informatique</h5>
+						<p>L'essor des objets connectés augmente les risques cyber. Mal sécurisés, ils deviennent des cibles faciles pour les attaques, comme l'illustre le botnet Mirai.</p>
+						<a href="https://www.serma-safety-security.com/quand-liot-revolutionne-la-securite-informatique/"> source : Serema</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>Qu’est-ce que la vulnérabilité des appareils IoT ?</h5>
+						<p>Les appareils IoT présentent des failles telles que mots de passe faibles et absence de mises à jour, les rendant vulnérables aux cyberattaques.</p>
+						<a href="https://www.fortinet.com/fr/resources/cyberglossary/iot-device-vulnerabilities/"> source : Fortinet</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>Protéger l’invisible : enjeux de cybersécurité dans l’ère des objets connectés</h5>
+						<p>La prolifération des objets connectés accroît la surface d'attaque. Une stratégie de cybersécurité est essentielle pour protéger les données et assurer la résilience numérique.</p>
+						<a href="https://www.groupeonepoint.com/fr/publications/proteger-linvisible-enjeux-de-cybersecurite-dans-lere-des-objets-connectes/"> source : Onepoint</a>
+					</div>
+
+					<div class="cardVeille">
+						<h5>La sécurité des objets connectés (IoT)</h5>
+						<p>Les objets connectés sont vulnérables aux cyberattaques. Adopter des mots de passe forts, mettre à jour régulièrement et limiter les connexions réseau sont des pratiques recommandées.</p>
+						<a href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/securite-objets-connectes-iot"> source : cybermalveillance gouv</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>IoT & Sécurité : les faiblesses de l’IoT</h5>
+						<p>L'IoT souffre de failles comme l'absence de mises à jour et des protocoles non sécurisés. Une approche de sécurité dès la conception est cruciale pour protéger ces dispositifs.</p>
+						<a href="https://www.wixalia.com/actualites/iot-securite-les-faiblesses-de-liot/"> source : Wixalia</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Qu’est-ce que l’internet of things ?</h5>
+						<p>L'Internet des objets (IoT) connecte des appareils pour collecter et échanger des données. Il transforme divers secteurs mais nécessite une sécurité robuste pour protéger les informations.</p>
+						<a href="https://www.oracle.com/fr/internet-of-things/"> source : Oracle</a>
+					</div>
+					<div class="cardVeille" name="hidden">
+						<h5>L'industrie néglige la sécurité des OT et de l'IoT</h5>
+						<p>De nombreuses industries sous-estiment la sécurité des technologies opérationnelles (OT) et de l'IoT, exposant leurs systèmes à des risques accrus de cyberattaques.</p>
+						<a href="https://b2b-cyber-security.de/fr/L%27industrie-n%C3%A9glige-la-s%C3%A9curit%C3%A9-des-OT-et-de-l%27IoT/"> source : B2B Cyber Security</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>L'IoT, ce maillon faible dans la cybersécurité bientôt plus réglementée</h5>
+						<p>Face aux vulnérabilités de l'IoT, des réglementations plus strictes sont envisagées pour renforcer la cybersécurité et protéger les infrastructures critiques.</p>
+						<a href="https://www.lemondeinformatique.fr/les-dossiers/lire-l-iot-ce-maillon-faible-dans-la-cybersecurite-bientot-plus-reglementee-1546.html"> source : Le Monde Informatique</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Remote-controlled sex toys could be hacked to harm users, UK government warns</h5>
+						<p>Les sex toys connectés présentent des risques de piratage pouvant entraîner des préjudices physiques et psychologiques. Le gouvernement britannique alerte sur ces dangers.</p>
+						<a href="https://www.independent.co.uk/tech/sex-toys-hacked-remote-control-b2677845.html"> source : Independent</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Security for IoT devices</h5>
+						<p>Sécuriser les appareils IoT implique une approche holistique incluant des mises à jour régulières, une authentification forte et une surveillance continue pour prévenir les intrusions.</p>
+						<a href="https://www.redhat.com/fr/topics/security/security-for-iot-devices"> source : Red Hat</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Recommandations relatives à la sécurité des objets connectés</h5>
+						<p>L'ANSSI recommande des pratiques telles que la mise à jour régulière des dispositifs, l'utilisation de mots de passe robustes et la limitation des connexions pour sécuriser l'IoT.</p>
+						<a href="https://cyber.gouv.fr/publications/recommandations-relatives-la-securite-des-systemes-dobjets-connectes"> source : ANSSI</a>
+					</div>
+					<div class="cardVeille" name="hidden">
+						<h5>CES 2025 : les entreprises intègrent l'IA dans une gamme étendue, malgré les risques en matière de protection de la vie privée</h5>
+						<p>l'intégration de l'IA dans divers gadgets soulève des préoccupations concernant la protection de la vie privée et la sécurité des données personnelles.</p>
+						<a href="https://hardware.developpez.com/actu/366398/L-IA-au-coeur-du-CES-2025-les-entreprises-integrent-l-IA-dans-une-gamme-etendue-de-gadgets-dont-des-refrigerateurs-et-des-televiseurs-malgre-les-risques-en-matiere-de-protection-de-la-vie-privee/"> source : developpez.com</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Les téléviseurs sans OS et connexion Internet méritent-ils de faire leur retour ? Les téléviseurs intelligents sont comme des chevaux de Troie dans les domiciles</h5>
+						<p>Les téléviseurs intelligents, connectés à Internet, peuvent collecter des données sensibles, posant des risques pour la vie privée des utilisateurs.</p>
+						<a href="https://www.developpez.com/actu/365989/Les-televiseurs-sans-OS-et-connexion-Internet-meritent-ils-de-faire-leur-retour-Les-televiseurs-intelligents-sont-comme-des-chevaux-de-Troie-dans-les-domiciles-des-tiers-qui-en-font-l-acquisition/"> source : developpez.com</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>Aspirateur robot piraté</h5>
+						<p>Des aspirateurs robots ont été piratés pour proférer des insultes racistes, illustrant les dangers liés à la sécurité des objets connectés domestiques.</p>
+						<a href="https://www.numerama.com/cyberguerre/1825108-un-aspirateur-robot-ecovacs-hacke-hurle-des-injures-racistes-que-sest-il-passe.html"> source : Numerama</a><br>
+						<a href="https://www.cnetfrance.fr/news/des-robots-aspirateurs-se-font-pirater-et-diffusent-des-insultes-racistes-aux-utilisateurs"> source : Cnet</a><br>
+						<a href="https://www.mac4ever.com/domotique/184674-est-ce-que-votre-aspirateur-robot-vous-espionne-en-plus-d-etre-raciste"> source : Mac4ever</a><br>
+						<a href="https://www.notebookcheck.biz/Selon-un-nouveau-rapport-les-cameras-et-les-haut-parleurs-d-un-aspirateur-robot-d-une-marque-populaire-ont-ete-pirates.897558.0.html"> source : NotebookCheck</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>La technologie Smart Home est moins sûre que vous ne le pensez selon une nouvelle étude de l'université Northeastern</h5>
+						<p>Une étude révèle que de nombreux appareils de la maison intelligente présentent des vulnérabilités, exposant les utilisateurs à des risques de piratage et de violation de la vie privée.</p>
+						<a href="https://www.serma-safety-security.com/quand-liot-revolutionne-la-securite-informatique/"> source : Serema</a>
+					</div>
+
+					<div class="cardVeille" name="hidden">
+						<h5>VTech se fait hacker les données de 200 000 enfants</h5>
+						<p>En 2015, VTech a subi une cyberattaque compromettant les données personnelles de 200 000 enfants, mettant en lumière les risques liés à la sécurité des jouets connectés.</p>
+						<a href="https://siecledigital.fr/2015/12/01/vtech-se-fait-hacker-les-donnees-de-200-000-enfants/ "> source : SiecleDigital</a>
+						<a href="https://www.usine-digitale.fr/article/les-donnees-de-6-4-millions-d-enfants-piratees-depuis-le-site-du-fabricant-de-jouets-vtech.N367457">source : L'Unsine Digitale</a>
+					</div>
+
+					<button id="buttonArticle" onclick="afficherArticle()"><span> Voir plus</span></button>
+
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>&copy; 2025 Adèle Médoc. Tous droits réservés.</p>
+  			<p><a href="mentions_legales.html">Mentions légales</a></p>
+  			<p>
+    			<a href="https://github.com/adele-medoc" target="_blank">GitHub</a> |
+    			<a href="https://www.linkedin.com/in/ad%C3%A8le-m%C3%A9doc/" target="_blank">LinkedIn</a>
+  			</p>
+  			<p>Site réalisé sur mon temps libre dans un objectif d'apprentissage et de présentation de mon parcours.</p>
+		</footer>
+	</body>
+</html>

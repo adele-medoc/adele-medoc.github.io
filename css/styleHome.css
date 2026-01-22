@@ -1,0 +1,1012 @@
+/***********************************page globale********************************************/
+
+body {
+    background-color: #f7d5b9;
+}
+
+h1 {
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 6px 2px 7px rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+h2 {
+    color: #0C6662;
+    padding: 2em 0em 0.5em 1em;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    color: #C52A1B;
+    font-size: 3em;
+    padding: 0em 0em 1em 1em;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+h4 {
+    color: #1D9787;
+    font-size: 2em;
+}
+
+h5 {
+    color: #E94F1A;
+}
+
+
+#aPropos,
+#parcours,
+#technologies,
+#veille {
+    margin: 2em 8em 2em 8em;
+}
+
+/*********************************** barre navigation ********************************************/
+/* From Uiverse.io by vinodjangid07 */
+#menuBurger {
+    border-radius: 9px;
+    border: none;
+}
+
+#menuBurger:focus {
+    box-shadow: 0 0 0 0;
+}
+
+#checkbox {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+}
+
+.bars {
+    width: 100%;
+    height: 4px;
+    background-color: #C52A1B;
+    border-radius: 4px;
+}
+
+#bar2 {
+    transition-duration: .8s;
+}
+
+#bar1,
+#bar3 {
+    width: 70%;
+}
+
+#checkbox:checked+.toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+#checkbox:checked+.toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+/********************boutons********************/
+.cutebutton:hover span {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+}
+
+.cutebutton span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 20px;
+    background: #ffffff10;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease-in-out;
+    transition-property: all;
+    transition-property: color, backdrop-filter;
+    height: 100%;
+    width: 100%;
+}
+
+.cutebutton {
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(32deg, #0C6662, #1D9787, #C52A1B, #EC861C);
+    transition: all 1.5s ease;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    padding: 0px;
+    height: 2em;
+    width: 9em;
+
+}
+
+button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 20px;
+    background: #ffffff10;
+    backdrop-filter: blur(20px);
+    transition: 0.4s ease-in-out;
+    transition-property: color, backdrop-filter;
+    height: 100%;
+    width: 100%;
+}
+
+button:hover span {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+}
+
+/***********************************Top********************************************/
+#top {
+    background-image: url("../images/img4.png");
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    flex-direction: column;
+    text-shadow: 5px 3px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 1em;
+}
+
+/***********************************Apropos********************************************/
+.card-main {
+   background-color: #E94F1A57;
+    border: 2px solid #C52A1B;
+    border-radius: 10px;
+    transition: transform 0.7s ease, box-shadow 0.5s ease;
+    line-height: 1.4;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-main:hover {
+    background-color: #E94F1AB5;
+    transform: scale(1.02);
+    transition: transform 0.7s ease, box-shadow 0.5s ease;
+    line-height: 1.4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+#divApropos{display: flex;
+flex-direction: row;}
+#textApropos {
+    text-align: justify;
+    font-size: 1.30rem;
+    margin-right: 1em;
+    margin-left: 1.2em;
+}
+
+#imgPresentation {
+    border-radius: 51%;
+    margin: 4em 1em 4em 1em;
+    aspect-ratio: 1 / 1;
+}
+
+#contact {
+    margin: 3.5em 2em 0em 2em;
+    display: flex;
+    justify-content: space-around;
+}
+
+/***********************************parcoursInfo********************************************/
+#parcoursInfo {
+    display: grid;
+    display: grid;
+    grid-template-columns: 40% 10% 40%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    margin-top: 5em;
+}
+
+#divParcoursInfo1>h5 {
+    color: #006A89;
+}
+
+#divParcoursInfo2>h5 {
+    color: #E20713;
+}
+
+#divParcoursInfo3>h5 {
+    color: #53AF33;
+}
+
+#divParcoursInfo4>h5 {
+    color: #134A80;
+}
+
+/*Tempora*/
+#divParcoursInfo1 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    align-self: center;
+    justify-self: end;
+    margin: -0.1em 2em 0 0;
+}
+
+/*RBI*/
+#divParcoursInfo2 {
+    justify-self: end;
+    justify-self: end;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    align-self: center;
+    justify-self: end;
+    margin: 0.49em 2em 0 0;
+
+}
+
+/*BTS*/
+#divParcoursInfo3 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    align-self: center;
+    margin: 0.1em 0 0 2em;
+
+
+}
+
+/*CDA*/
+#divParcoursInfo4 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-column-start: 3;
+    align-self: center;
+    margin: -0.5em 0 0 2em;
+}
+
+#barreSvg {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    height: 25em;
+    justify-self: center;
+}
+
+.cardParcours {
+    background: #ffffff;
+    width: 130px;
+    height: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 1s cubic-bezier(.39, .58, .57, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+.cardParcours:hover {
+    width: 25em;
+    height: 15em;
+}
+
+.imgParcours {
+    max-width: 4em;
+    max-block-size: 4em;
+    margin: -0.95em 0em 0.25em 0.75em;
+
+}
+
+.pParcours {
+    align-items: end;
+    justify-content: center;
+    text-align: justify;
+    font-size: 0.75rem;
+    margin: 0.2em 0.75em -0.5em 0.75em;
+}
+
+.h5Parcours {
+    font-size: 1rem;
+    justify-self: center;
+    margin: 0.25em;
+    padding: 0;
+}
+
+
+.aParcours {
+    text-decoration: none;
+    margin: 0.75em 1em 0.5em 1em;
+    font-size: 0.75rem;
+    justify-self: end;
+    align-self: center;
+}
+
+/**********************************projetPro***************************************/
+.projetPro {
+    margin: 60px 144px 60px 134px;
+
+    box-shadow: 4px 7px 16px 2px black;
+
+    text-align: justify;
+    font-size: larger;
+    background-color: rgba(33, 171, 153, 0.44);
+    border: 2px solid #198f83;
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    line-height: 1.4;
+}
+
+.projetPro:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    background-color: rgba(33, 171, 153, 0.7);
+    font-size: 20px;
+}
+
+div.projetPro ul {
+    list-style-type: none;
+    margin-left: 10em;
+}
+
+div.projetPro h3 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+div.projetPro p {
+    margin: -1.75em 0px 1.5em 0;
+}
+
+/******************************Technologies****************************************/
+#langage,
+#logiciel {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    margin: auto;
+
+}
+
+figure>img {
+    width: 12em;
+    height: 12em;
+}
+
+figcaption {
+   position: absolute;
+  opacity: 0;
+  margin: -8em 0em 0em 2em;
+  border-radius: 20px;
+  color: #f1f1f1;
+  background: rgba(0, 0, 0, 0.7);
+  transition: .5s ease;
+  font-size: 15px;
+  width: 10em;
+  height: 9em;
+}
+
+figcaption>p {
+    text-align: center;
+    margin-top: 2em;
+}
+
+figcaption:hover {
+    opacity: 1;
+    border-radius: 20px;
+}
+
+#b1,
+#b2,
+#b3,
+#b4 {
+    width: 2em;
+    height: 2em;
+}
+
+/***************************************projets***************************************/
+
+#projetsDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.projectsCard {
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    width: 31%;
+    margin: 10px 10px 10px 10px;
+    flex-direction: column;
+    border: 2px solid #C52A1B;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 37em;
+}
+
+.projectsCard:hover {
+    transform: translateY(-5px);
+}
+
+.picto-projet {
+    max-width: 17rem;
+    height: 10rem;
+    margin: 20px auto;
+    display: block;
+}
+
+.img_projet {
+
+    height: 10rem;
+    align-self: center;
+}
+
+.techno {
+    font-weight: bold;
+    margin: -5px 0px 5px 0px;
+    margin: 2px 0px 8px 0px;
+    text-align: center;
+}
+
+
+.descriptionProjet {
+    text-align: center;
+    background-color: white;
+    padding-bottom: 0.5em;
+    border-radius: 9px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.cardText {
+    font-size: 1rem;
+    text-align: justify;
+    margin: 2px 8px 2px 8px;
+}
+
+.aprojectsCard {
+
+    text-align: center;
+    padding: 6px 16px;
+    background-color: #C52A1B;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    margin: 0.5em auto 1em auto;
+    border: none;
+    margin-top: auto;
+}
+
+.projectsCard:hover a {
+    background-color: #a62316;
+}
+
+.titleProjectsCard {
+    text-decoration-style: solid;
+}
+
+/***********************************Footer********************************************/
+footer {
+    background: chocolate;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+/***********************************Veille********************************************/
+#sujetVeille {
+    background-color: #21AB99;
+    margin: 0px 45px 0px 32px;
+    padding: 1px 18px 1px 20px;
+}
+
+#defVeille {
+    margin: 2em 0em 2em 0;
+  padding: 1em 2em 1em 2em;
+  text-align: justify;
+  font-size: large;
+  line-height: 1.4;
+}
+
+#defVeille h4 {
+    margin: 0 0 0 -36px;
+}
+
+.resumeVeille {
+    box-shadow: 4px 7px 16px 2px black;
+  text-align: justify;
+  font-size: larger;
+  background-color: rgba(33, 171, 153, 0.44);
+  border: 2px solid #198f83;
+  padding: 1em;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  line-height: 1.4;
+  margin: 0 0 5em 0;
+}
+
+.resumeVeille:hover{ transform: scale(1.03);
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    background-color: rgba(33, 171, 153, 0.7);
+    font-size: 20px;
+}
+
+#outilsVeille {
+    margin: 0em 0 2em 0;
+    box-shadow: 4px 7px 16px 2px black;
+    text-align: justify;
+    font-size: larger;
+    background-color: #E94F1A57;
+    border: 2px solid #C52A1B;
+    padding: 1px 25px 1px 25px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: row;
+}
+
+#outilsVeille:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+    background-color: #E94F1AB5;
+    font-size: 20px;
+}
+
+#outilsVeille img {
+   width: 10em;
+  height: 10em;
+}
+
+#outilsVeille p {
+    align-self: center;
+    margin-right: 1em;
+}
+
+article {
+    justify-content: center;
+}
+
+.cardVeille {
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e2ddef;
+    width: 14em;
+    height: 22em;
+    margin: 0px 10px 20px 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    text-align: justify;
+    padding: 0px 8px 8px 8px;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+
+.cardVeille p {
+    font-size: initial;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.cardVeille h5 {
+    font-size: 17px;
+    padding: 0;
+    margin: 10px 10px 6px 0px;
+    color: #0C6662;
+}
+
+.cardVeille a,
+#divParcours1 a,
+#divParcours2 a,
+#divParcours3 a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    margin: 0 10px 9px 0;
+    align-self: flex-end;
+    font-size: 12px;
+}
+
+.cardVeille:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+/***********************************mention légale********************************************/
+.titreMention{
+    color: #C52A1B;
+    margin-top: 1em;
+}
+.mentions {margin-left: 2em;}
+
+/***********************************Responsivité********************************************/
+@media screen and (max-width:750px) {
+
+h1 {
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 6px 2px 7px rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+h2 {
+    color: #0C6662;
+    padding: 1em 0em 0.5em 0.25em;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    color: #C52A1B;
+    font-size: 2em;
+    padding: 1em 0em 1em 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+h4 {
+    color: #1D9787;
+    font-size: 2em;
+}
+
+h5 {
+    color: #E94F1A;
+}
+
+
+#aPropos,
+#parcours,
+#technologies,
+#veille {
+    margin: 1em;
+}
+.cutebutton{
+    height: auto;
+  width: auto;
+  margin: 0 0.25em 0 0.25em;
+}
+.card-main{width: 100%;}
+
+
+#divApropos{
+    display: flex;
+    flex-direction: column;
+}
+
+#textApropos {
+    text-align: justify;
+    font-size: 1rem;
+    margin-right:0;
+    margin-left:0;
+}
+
+#imgPresentation {
+    width: 24em;
+  align-self: center;
+  margin: 0;
+}
+
+#contact{margin: 3.5em 0em 0em 0em;}
+
+/*parcours */
+#parcoursInfo{margin: 0;
+display: flex;
+flex-direction: column;}
+
+#barreSvg{
+    display: none;
+}
+
+#divParcoursInfo1,#divParcoursInfo2,
+#divParcoursInfo3,#divParcoursInfo4{
+    height: fit-content;
+   margin: 1em 0em;
+    width: 100%;
+
+}
+#divParcoursInfo1{order: 2;}
+#divParcoursInfo2{order: 4;}
+#divParcoursInfo3{order: 3;}
+#divParcoursInfo4{order: 1;}
+
+.projetPro{
+    margin: 1em 0;
+    font-size: 1em;
+    padding: 0em 1em;
+}
+
+div.projetPro h3{
+    font-size: 2rem;
+}
+div.projetPro p{margin: 0;}
+
+div.projetPro ul{list-style-type: none;
+  font-size: 0.75rem;
+  text-justify: none;
+  font-weight: bold;
+  margin: 0;
+}
+
+#lang2,#lang3,#logi2,#logi3 {
+    display: none;
+}
+
+.projectsCard {
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+  margin: 1em;
+  flex-direction: column;
+  border: 2px solid #C52A1B;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 100%;
+  height: fit-content;
+}
+
+address{font-style: normal;
+  line-height: inherit;
+  margin: 1em;}
+}
+
+
+@media screen and (min-width:751px) and (max-width:970px)  {
+h1 {
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 6px 2px 7px rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+h2 {
+    color: #0C6662;
+    padding: 0.5em 0em 0.5em 0.25em;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    color: #C52A1B;
+    font-size: 2em;
+    padding: 0em 0em 1em 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+h4 {
+    color: #1D9787;
+    font-size: 2em;
+}
+
+h5 {
+    color: #E94F1A;
+}
+
+
+#aPropos,
+#parcours,
+#technologies,
+#veille {
+    margin: 1em;
+}
+#veille{
+    margin-top: 2em;
+}
+
+.card-main{width: 100%;}
+
+
+#divApropos{
+    display: flex;
+    flex-direction: column;
+}
+
+#textApropos {
+    text-align: justify;
+    font-size: 1rem;
+    margin-right:0;
+    margin-left:0;
+}
+
+#imgPresentation {
+    width: 24em;
+  align-self: center;
+  margin: 0;
+}
+
+/*parcours */
+#parcoursInfo{
+    margin: 0.5em 1em;
+display: flex;
+flex-direction: column;}
+
+#barreSvg{
+    display: none;
+}
+
+#divParcoursInfo1,#divParcoursInfo2,
+#divParcoursInfo3,#divParcoursInfo4{
+    height: fit-content;
+   margin: 1em 0em;
+    width: 100%;
+
+}
+#divParcoursInfo1{order: 2;}
+#divParcoursInfo2{order: 4;}
+#divParcoursInfo3{order: 3;}
+#divParcoursInfo4{order: 1;}
+
+.projetPro{
+    margin: 0em;
+    font-size: 1em;
+    padding: 1em 1em;
+}
+
+div.projetPro h3{
+    font-size: 2rem;
+}
+div.projetPro p{margin: 0;}
+
+div.projetPro ul{list-style-type: none;
+  font-size: 0.75rem;
+  text-justify: none;
+  font-weight: bold;
+  margin: 0;
+}
+
+#lang2,#lang3,#logi2,#logi3 {
+    display: none;
+}
+
+.projectsCard {
+ width: 45%;
+    height: 38em;
+}
+
+address{font-style: normal;
+  line-height: inherit;
+  margin: 1em;}
+}
+
+
+@media screen and (min-width:971px) and (max-width:1170px)  {
+
+h1 {
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 6px 2px 7px rgb(0, 0, 0);
+    font-weight: 600;
+}
+
+h2 {
+    color: #0C6662;
+    padding: 0.5em 0em 0.5em 0.25em;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    color: #C52A1B;
+    font-size: 2em;
+    padding: 0em 0em 1em 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+h4 {
+    color: #1D9787;
+    font-size: 2em;
+}
+
+h5 {
+    color: #E94F1A;
+}
+
+#veille{
+    margin-top: 3em;
+}
+.card-main{width: 100%;}
+
+
+#divApropos{
+    display: flex;
+    flex-direction: column;
+}
+
+#textApropos {
+    text-align: justify;
+    font-size: 1rem;
+    margin-right:0;
+    margin-left:0;
+}
+
+#imgPresentation {
+width: 24em;
+  align-self: center;
+  margin: 0;
+}
+
+.projetPro{
+    margin: 0em;
+    font-size: 1em;
+    padding: 1em 1em;
+}
+
+div.projetPro h3{
+    font-size: 2rem;
+}
+div.projetPro p{margin: 0;}
+
+div.projetPro ul{list-style-type: none;
+    margin-left: 11em;
+    margin-top: 2em;
+}
+
+.projectsCard {
+ width: 45%;
+    height: 38em;
+}
+
+address{font-style: normal;
+  line-height: inherit;
+  margin: 1em;}
+}
