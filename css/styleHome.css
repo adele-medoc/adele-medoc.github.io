@@ -645,8 +645,6 @@ article {
 #divParcours3 a {
     outline: none;
     text-decoration: none;
-    padding: 2px 1px 0;
-    margin: 0 10px 9px 0;
     align-self: flex-end;
     font-size: 12px;
 }
