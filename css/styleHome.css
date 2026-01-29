@@ -183,6 +183,8 @@ button:hover span {
     flex-direction: column;
     text-shadow: 5px 3px 8px rgba(0, 0, 0, 0.6);
     margin-bottom: 1em;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /***********************************Apropos********************************************/
